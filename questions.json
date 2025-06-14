@@ -1,0 +1,317 @@
+[
+  {
+    "text": "Tu ouvres un placard interdit et un mini dragon s'échappe en crachant des étincelles. Que fais-tu ?",
+    "options": [
+      {
+        "text": "Tu essaies de le calmer avec des friandises volées à la cuisine.",
+        "house": "Serpentard"
+      },
+      {
+        "text": "Tu le protèges avec ton manteau et cherches un abri pour lui.",
+        "house": "Poufsouffle"
+      },
+      {
+        "text": "Tu notes chaque détail de son comportement pour le rapporter au professeur.",
+        "house": "Serdaigle"
+      },
+      {
+        "text": "Tu cries « liberté ! » et tu le suis en courant dans les couloirs.",
+        "house": "Gryffondor"
+      }
+    ]
+  },
+  {
+    "text": "Ton chaudron explose en cours de potions. Que fais-tu ?",
+    "options": [
+      {
+        "text": "Tu aides à nettoyer pendant que les autres rigolent.",
+        "house": "Poufsouffle"
+      },
+      {
+        "text": "Tu prends des notes sur ce qui n’a pas fonctionné.",
+        "house": "Serdaigle"
+      },
+      {
+        "text": "Tu lances un nouveau mélange, ça ne peut pas être pire.",
+        "house": "Gryffondor"
+      },
+      {
+        "text": "Tu accuses discrètement le chat de la classe.",
+        "house": "Serpentard"
+      }
+    ]
+  },
+  {
+    "text": "Tu tombes sur un miroir magique qui parle. Il te dit un secret gênant. Tu fais quoi ?",
+    "options": [
+      {
+        "text": "Tu négocies avec lui pour qu’il parle d’un autre élève à la place.",
+        "house": "Serpentard"
+      },
+      {
+        "text": "Tu prends des notes, ce miroir est une mine d’informations.",
+        "house": "Serdaigle"
+      },
+      {
+        "text": "Tu réponds avec un secret encore plus bizarre, pour l’intimider.",
+        "house": "Gryffondor"
+      },
+      {
+        "text": "Tu promets de revenir discuter avec lui, il a sûrement besoin d’un ami.",
+        "house": "Poufsouffle"
+      }
+    ]
+  },
+  {
+    "text": "Un fantôme t'invite à sa fête d'anniversaire de mort. Quelle est ta réaction ?",
+    "options": [
+      {
+        "text": "Tu prépares un gâteau avec des bougies qui flottent.",
+        "house": "Poufsouffle"
+      },
+      {
+        "text": "Tu viens en costume de troll pour mettre l'ambiance.",
+        "house": "Gryffondor"
+      },
+      {
+        "text": "Tu cherches l'histoire de sa mort pour briller en société.",
+        "house": "Serdaigle"
+      },
+      {
+        "text": "Tu proposes d'amener des friandises... qui font peur.",
+        "house": "Serpentard"
+      }
+    ]
+  },
+  {
+    "text": "Tu trouves un livre ancien qui parle tout seul. Que fais-tu ?",
+    "options": [
+      {
+        "text": "Tu engages une grande discussion à voix haute dans la salle commune.",
+        "house": "Gryffondor"
+      },
+      {
+        "text": "Tu essaies de comprendre sa langue d'origine et d’en faire une étude.",
+        "house": "Serdaigle"
+      },
+      {
+        "text": "Tu lui confectionnes un marque-page pour qu’il ne se sente pas seul.",
+        "house": "Poufsouffle"
+      },
+      {
+        "text": "Tu lui demandes s’il connaît des sorts rares ou oubliés.",
+        "house": "Serpentard"
+      }
+    ]
+  },
+  {
+    "text": "Un élève a jeté un sort qui fait éternuer des chauves-souris. Tu fais quoi ?",
+    "options": [
+      {
+        "text": "Tu lui passes un mouchoir enchanté et un sourire.",
+        "house": "Poufsouffle"
+      },
+      {
+        "text": "Tu analyses les effets secondaires sur l’air ambiant.",
+        "house": "Serdaigle"
+      },
+      {
+        "text": "Tu éternues encore plus fort pour l'impressionner.",
+        "house": "Gryffondor"
+      },
+      {
+        "text": "Tu prends discrètement une fiole de son sort pour l’étudier.",
+        "house": "Serpentard"
+      }
+    ]
+  },
+  {
+    "text": "Tu découvres une pièce secrète pleine de chapeaux animés. Que fais-tu ?",
+    "options": [
+      {
+        "text": "Tu en choisis un pour chacun de tes amis.",
+        "house": "Poufsouffle"
+      },
+      {
+        "text": "Tu cherches celui qui donne des pouvoirs cachés.",
+        "house": "Serpentard"
+      },
+      {
+        "text": "Tu les interroges pour savoir qui les a créés.",
+        "house": "Serdaigle"
+      },
+      {
+        "text": "Tu mets le plus ridicule et tu fais un défilé.",
+        "house": "Gryffondor"
+      }
+    ]
+  },
+  {
+    "text": "Pendant le dîner, ta soupe se transforme en limonade. Tu réagis comment ?",
+    "options": [
+      {
+        "text": "Tu échanges ton dessert pour quelqu’un qui préfère la limonade.",
+        "house": "Poufsouffle"
+      },
+      {
+        "text": "Tu compares la consistance avec la soupe d'hier.",
+        "house": "Serdaigle"
+      },
+      {
+        "text": "Tu bois quand même. On vit qu’une fois !",
+        "house": "Gryffondor"
+      },
+      {
+        "text": "Tu essaies de le refaire discrètement sur le repas de ton voisin.",
+        "house": "Serpentard"
+      }
+    ]
+  },
+  {
+    "text": "Un sort a transformé ton oreiller en hérisson. Que fais-tu ?",
+    "options": [
+      {
+        "text": "Tu décides de dormir avec quand même. Aventure !",
+        "house": "Gryffondor"
+      },
+      {
+        "text": "Tu vérifies s’il répond à des stimuli magiques.",
+        "house": "Serdaigle"
+      },
+      {
+        "text": "Tu lui fabriques une petite couverture pour qu’il soit à l’aise.",
+        "house": "Poufsouffle"
+      },
+      {
+        "text": "Tu essaies de le dresser pour qu’il te défende la nuit.",
+        "house": "Serpentard"
+      }
+    ]
+  },
+  {
+    "text": "Tu reçois une lettre mystérieuse sans nom. Que fais-tu ?",
+    "options": [
+      {
+        "text": "Tu l’ouvres immédiatement, trop curieux pour attendre.",
+        "house": "Gryffondor"
+      },
+      {
+        "text": "Tu demandes à tes amis s’ils en ont reçu une aussi.",
+        "house": "Poufsouffle"
+      },
+      {
+        "text": "Tu la scans pour y déceler des traces d’enchantement.",
+        "house": "Serpentard"
+      },
+      {
+        "text": "Tu analyses l’écriture et le papier pour identifier l’auteur.",
+        "house": "Serdaigle"
+      }
+    ]
+  },
+  {
+    "text": "Tu entends un chant magique venant d’une salle fermée. Que fais-tu ?",
+    "options": [
+      {
+        "text": "Tu ouvres la porte en grand, prêt à tout.",
+        "house": "Gryffondor"
+      },
+      {
+        "text": "Tu essaies de décrypter la magie du chant par son rythme.",
+        "house": "Serdaigle"
+      },
+      {
+        "text": "Tu attends que la musique s’arrête pour frapper doucement.",
+        "house": "Poufsouffle"
+      },
+      {
+        "text": "Tu écoutes et enregistres la mélodie dans ta mémoire.",
+        "house": "Serpentard"
+      }
+    ]
+  },
+  {
+    "text": "On t’offre un œuf de créature magique inconnu. Que fais-tu ?",
+    "options": [
+      {
+        "text": "Tu le couves toi-même, avec une couverture chaude.",
+        "house": "Gryffondor"
+      },
+      {
+        "text": "Tu compares sa texture à tous les œufs de créatures connues.",
+        "house": "Serdaigle"
+      },
+      {
+        "text": "Tu le caches pour voir ce qu’il devient en secret.",
+        "house": "Serpentard"
+      },
+      {
+        "text": "Tu construis un petit nid et le surveilles tendrement.",
+        "house": "Poufsouffle"
+      }
+    ]
+  },
+  {
+    "text": "Tu trouves une valise qui gronde quand on s’en approche. Que fais-tu ?",
+    "options": [
+      {
+        "text": "Tu analyses les vibrations pour deviner ce qu’il y a dedans.",
+        "house": "Serdaigle"
+      },
+      {
+        "text": "Tu t’approches lentement, baguette à la main.",
+        "house": "Gryffondor"
+      },
+      {
+        "text": "Tu mets une plume à l’intérieur pour voir si elle ressort.",
+        "house": "Serpentard"
+      },
+      {
+        "text": "Tu l’entoures de coussins au cas où elle exploserait.",
+        "house": "Poufsouffle"
+      }
+    ]
+  },
+  {
+    "text": "Le professeur t’autorise à créer un sort. Tu choisis lequel ?",
+    "options": [
+      {
+        "text": "Un sort qui inverse les mots de ton interlocuteur.",
+        "house": "Serpentard"
+      },
+      {
+        "text": "Un sort qui fait apparaître une armure brillante.",
+        "house": "Gryffondor"
+      },
+      {
+        "text": "Un sort qui fait pousser des fleurs à chaque pas.",
+        "house": "Poufsouffle"
+      },
+      {
+        "text": "Un sort qui permet de lire très vite.",
+        "house": "Serdaigle"
+      }
+    ]
+  },
+  {
+    "text": "Tu gagnes un tournoi magique. Que fais-tu de ton prix ?",
+    "options": [
+      {
+        "text": "Tu le conserves pour l'étudier de près.",
+        "house": "Serdaigle"
+      },
+      {
+        "text": "Tu le partages avec ton équipe.",
+        "house": "Poufsouffle"
+      },
+      {
+        "text": "Tu le brandis fièrement au milieu du dortoir.",
+        "house": "Gryffondor"
+      },
+      {
+        "text": "Tu l’utilises pour gagner encore plus.",
+        "house": "Serpentard"
+      }
+    ]
+  }
+]
