@@ -16,6 +16,7 @@ createStars();
 let questions = [];
 let current = 0;
 const scores = { Gryffondor: 0, Serpentard: 0, Poufsouffle: 0, Serdaigle: 0 };
+let snitchGamePlayed = false;
 
 // Mettre à jour la barre de progression
 function updateProgress() {
@@ -30,6 +31,13 @@ function showQuestion() {
   quizDiv.innerHTML = "";
   resultDiv.className = "result";
   resultDiv.innerHTML = "";
+
+  // Vérifier si on doit lancer le mini-jeu après la question 7
+  if (current === 7 && !snitchGamePlayed) {
+    snitchGamePlayed = true;
+    launchSnitchGame();
+    return;
+  }
 
   if (current >= questions.length) {
     showResult();
@@ -72,6 +80,42 @@ function showQuestion() {
   quizDiv.appendChild(qDiv);
 }
 
+// Lancer le mini-jeu
+function launchSnitchGame() {
+  const quizDiv = document.getElementById("quiz");
+  
+  // Message d'introduction
+  quizDiv.innerHTML = `
+    <div class="question" style="text-align: center;">
+      <h3 style="font-size: 2rem;">⚡ Défi Spécial ! ⚡</h3>
+      <p style="font-size: 1.3rem; color: #c9b037; margin: 2rem 0;">
+        Le Vif d'Or a été aperçu !<br>
+        Montre tes talents d'Attrapeur pour gagner des points bonus !
+      </p>
+      <button class="replay-button" onclick="startSnitchGame()">
+        Commencer la chasse
+      </button>
+      <button class="continue-button" style="margin-top: 1rem; background: transparent; border-color: #c9b037; color: #c9b037;" onclick="skipSnitchGame()">
+        Passer le défi
+      </button>
+    </div>
+  `;
+}
+
+// Démarrer le jeu
+window.startSnitchGame = function() {
+  const game = new SnitchGame((score) => {
+    // Le score est déjà géré dans snitchGameComplete
+  });
+  game.init();
+};
+
+// Passer le jeu
+window.skipSnitchGame = function() {
+  window.snitchScore = 0;
+  showQuestion();
+};
+
 // Afficher le résultat
 function showResult() {
   const quizDiv = document.getElementById("quiz");
@@ -82,10 +126,36 @@ function showResult() {
   let maxScore = -1;
   const totalQuestions = questions.length;
   
+  // Ajouter des points bonus basés sur le score du Vif d'Or
+  if (window.snitchScore) {
+    // Bonus pour la maison dominante
+    const houseBonus = {
+      3: 2,  // Vif attrapé = 2 points bonus
+      2: 1,  // Bien essayé = 1 point bonus
+      1: 0   // Participation = pas de bonus
+    };
+    
+    // Trouver la maison avec le plus de points actuellement
+    let leadingHouse = "";
+    let leadingScore = -1;
+    for (let house in scores) {
+      if (scores[house] > leadingScore) {
+        leadingScore = scores[house];
+        leadingHouse = house;
+      }
+    }
+    
+    // Appliquer le bonus
+    if (leadingHouse && houseBonus[window.snitchScore]) {
+      scores[leadingHouse] += houseBonus[window.snitchScore];
+    }
+  }
+  
   // Calculer les pourcentages
+  const totalPoints = Object.values(scores).reduce((a, b) => a + b, 0);
   const percentages = {};
   for (let house in scores) {
-    percentages[house] = Math.round((scores[house] / totalQuestions) * 100);
+    percentages[house] = Math.round((scores[house] / totalPoints) * 100);
     if (scores[house] > maxScore) {
       maxScore = scores[house];
       maxHouse = house;
@@ -158,6 +228,8 @@ function showResult() {
   replayBtn.textContent = "Refaire le test";
   replayBtn.onclick = () => {
     current = 0;
+    snitchGamePlayed = false;
+    window.snitchScore = 0;
     for (let house in scores) scores[house] = 0;
     document.getElementById('progress').style.width = '0%';
     showQuestion();
@@ -166,6 +238,15 @@ function showResult() {
   resultDiv.appendChild(badge);
   resultDiv.appendChild(houseName);
   resultDiv.appendChild(message);
+  
+  // Ajouter un message spécial si le joueur a attrapé le Vif d'Or
+  if (window.snitchScore === 3) {
+    const snitchBadge = document.createElement("div");
+    snitchBadge.style.cssText = "color: #ffd700; font-style: italic; margin: 1rem 0; font-size: 1.1rem;";
+    snitchBadge.innerHTML = "✨ Attrapeur d'exception ! Le Vif d'Or a renforcé ton appartenance à ta maison ! ✨";
+    resultDiv.appendChild(snitchBadge);
+  }
+  
   resultDiv.appendChild(statsContainer);
   resultDiv.appendChild(replayBtn);
 }
@@ -191,6 +272,9 @@ function getHouseMessage(house, percentage) {
   };
   return messages[house] || '';
 }
+
+// Rendre showQuestion accessible globalement pour le mini-jeu
+window.showQuestion = showQuestion;
 
 // Charger les questions depuis le fichier JSON
 fetch('questions.json')
