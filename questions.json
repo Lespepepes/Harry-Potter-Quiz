@@ -1,317 +1,2245 @@
-[
-  {
-    "text": "Tu ouvres un placard interdit et un mini dragon s'échappe en crachant des étincelles. Que fais-tu ?",
-    "options": [
-      {
-        "text": "Tu essaies de le calmer avec des friandises volées à la cuisine.",
-        "house": "Serpentard"
-      },
-      {
-        "text": "Tu le protèges avec ton manteau et cherches un abri pour lui.",
-        "house": "Poufsouffle"
-      },
-      {
-        "text": "Tu notes chaque détail de son comportement pour le rapporter au professeur.",
-        "house": "Serdaigle"
-      },
-      {
-        "text": "Tu cries « liberté ! » et tu le suis en courant dans les couloirs.",
-        "house": "Gryffondor"
-      }
-    ]
+{
+  "meta": {
+    "title": "Quiz Harry Potter",
+    "description": "Questions immersives classées par thème pour une répartition homogène dans un quiz web.",
+    "categories": {
+      "Créatures magiques": "Questions liées aux animaux et créatures de l'univers magique.",
+      "Objets magiques": "Questions sur les objets enchantés, ensorcelés ou autonomes.",
+      "Sorts & potions": "Formules, effets de sortilèges, potions, enchantements.",
+      "Salles et lieux étranges": "Lieux changeants, passages secrets, pièces spéciales.",
+      "Phénomènes étranges": "Effets magiques mystérieux, anomalies, situations surnaturelles.",
+      "Relations & interactions": "Interactions sociales, choix éthiques, relations élèves/profs.",
+      "Énigmes & mystères": "Questions tournant autour de devinettes, énigmes ou découvertes secrètes.",
+      "Autre": "Questions inclassables ou généralistes."
+    },
+    "version": "1.0",
+    "author": "Auteur du quiz Harry Potter",
+    "total_questions": 92
   },
-  {
-    "text": "Ton chaudron explose en cours de potions. Que fais-tu ?",
-    "options": [
-      {
-        "text": "Tu aides à nettoyer pendant que les autres rigolent.",
-        "house": "Poufsouffle"
-      },
-      {
-        "text": "Tu prends des notes sur ce qui n’a pas fonctionné.",
-        "house": "Serdaigle"
-      },
-      {
-        "text": "Tu lances un nouveau mélange, ça ne peut pas être pire.",
-        "house": "Gryffondor"
-      },
-      {
-        "text": "Tu accuses discrètement le chat de la classe.",
-        "house": "Serpentard"
-      }
-    ]
-  },
-  {
-    "text": "Tu tombes sur un miroir magique qui parle. Il te dit un secret gênant. Tu fais quoi ?",
-    "options": [
-      {
-        "text": "Tu négocies avec lui pour qu’il parle d’un autre élève à la place.",
-        "house": "Serpentard"
-      },
-      {
-        "text": "Tu prends des notes, ce miroir est une mine d’informations.",
-        "house": "Serdaigle"
-      },
-      {
-        "text": "Tu réponds avec un secret encore plus bizarre, pour l’intimider.",
-        "house": "Gryffondor"
-      },
-      {
-        "text": "Tu promets de revenir discuter avec lui, il a sûrement besoin d’un ami.",
-        "house": "Poufsouffle"
-      }
-    ]
-  },
-  {
-    "text": "Un fantôme t'invite à sa fête d'anniversaire de mort. Quelle est ta réaction ?",
-    "options": [
-      {
-        "text": "Tu prépares un gâteau avec des bougies qui flottent.",
-        "house": "Poufsouffle"
-      },
-      {
-        "text": "Tu viens en costume de troll pour mettre l'ambiance.",
-        "house": "Gryffondor"
-      },
-      {
-        "text": "Tu cherches l'histoire de sa mort pour briller en société.",
-        "house": "Serdaigle"
-      },
-      {
-        "text": "Tu proposes d'amener des friandises... qui font peur.",
-        "house": "Serpentard"
-      }
-    ]
-  },
-  {
-    "text": "Tu trouves un livre ancien qui parle tout seul. Que fais-tu ?",
-    "options": [
-      {
-        "text": "Tu engages une grande discussion à voix haute dans la salle commune.",
-        "house": "Gryffondor"
-      },
-      {
-        "text": "Tu essaies de comprendre sa langue d'origine et d’en faire une étude.",
-        "house": "Serdaigle"
-      },
-      {
-        "text": "Tu lui confectionnes un marque-page pour qu’il ne se sente pas seul.",
-        "house": "Poufsouffle"
-      },
-      {
-        "text": "Tu lui demandes s’il connaît des sorts rares ou oubliés.",
-        "house": "Serpentard"
-      }
-    ]
-  },
-  {
-    "text": "Un élève a jeté un sort qui fait éternuer des chauves-souris. Tu fais quoi ?",
-    "options": [
-      {
-        "text": "Tu lui passes un mouchoir enchanté et un sourire.",
-        "house": "Poufsouffle"
-      },
-      {
-        "text": "Tu analyses les effets secondaires sur l’air ambiant.",
-        "house": "Serdaigle"
-      },
-      {
-        "text": "Tu éternues encore plus fort pour l'impressionner.",
-        "house": "Gryffondor"
-      },
-      {
-        "text": "Tu prends discrètement une fiole de son sort pour l’étudier.",
-        "house": "Serpentard"
-      }
-    ]
-  },
-  {
-    "text": "Tu découvres une pièce secrète pleine de chapeaux animés. Que fais-tu ?",
-    "options": [
-      {
-        "text": "Tu en choisis un pour chacun de tes amis.",
-        "house": "Poufsouffle"
-      },
-      {
-        "text": "Tu cherches celui qui donne des pouvoirs cachés.",
-        "house": "Serpentard"
-      },
-      {
-        "text": "Tu les interroges pour savoir qui les a créés.",
-        "house": "Serdaigle"
-      },
-      {
-        "text": "Tu mets le plus ridicule et tu fais un défilé.",
-        "house": "Gryffondor"
-      }
-    ]
-  },
-  {
-    "text": "Pendant le dîner, ta soupe se transforme en limonade. Tu réagis comment ?",
-    "options": [
-      {
-        "text": "Tu échanges ton dessert pour quelqu’un qui préfère la limonade.",
-        "house": "Poufsouffle"
-      },
-      {
-        "text": "Tu compares la consistance avec la soupe d'hier.",
-        "house": "Serdaigle"
-      },
-      {
-        "text": "Tu bois quand même. On vit qu’une fois !",
-        "house": "Gryffondor"
-      },
-      {
-        "text": "Tu essaies de le refaire discrètement sur le repas de ton voisin.",
-        "house": "Serpentard"
-      }
-    ]
-  },
-  {
-    "text": "Un sort a transformé ton oreiller en hérisson. Que fais-tu ?",
-    "options": [
-      {
-        "text": "Tu décides de dormir avec quand même. Aventure !",
-        "house": "Gryffondor"
-      },
-      {
-        "text": "Tu vérifies s’il répond à des stimuli magiques.",
-        "house": "Serdaigle"
-      },
-      {
-        "text": "Tu lui fabriques une petite couverture pour qu’il soit à l’aise.",
-        "house": "Poufsouffle"
-      },
-      {
-        "text": "Tu essaies de le dresser pour qu’il te défende la nuit.",
-        "house": "Serpentard"
-      }
-    ]
-  },
-  {
-    "text": "Tu reçois une lettre mystérieuse sans nom. Que fais-tu ?",
-    "options": [
-      {
-        "text": "Tu l’ouvres immédiatement, trop curieux pour attendre.",
-        "house": "Gryffondor"
-      },
-      {
-        "text": "Tu demandes à tes amis s’ils en ont reçu une aussi.",
-        "house": "Poufsouffle"
-      },
-      {
-        "text": "Tu la scans pour y déceler des traces d’enchantement.",
-        "house": "Serpentard"
-      },
-      {
-        "text": "Tu analyses l’écriture et le papier pour identifier l’auteur.",
-        "house": "Serdaigle"
-      }
-    ]
-  },
-  {
-    "text": "Tu entends un chant magique venant d’une salle fermée. Que fais-tu ?",
-    "options": [
-      {
-        "text": "Tu ouvres la porte en grand, prêt à tout.",
-        "house": "Gryffondor"
-      },
-      {
-        "text": "Tu essaies de décrypter la magie du chant par son rythme.",
-        "house": "Serdaigle"
-      },
-      {
-        "text": "Tu attends que la musique s’arrête pour frapper doucement.",
-        "house": "Poufsouffle"
-      },
-      {
-        "text": "Tu écoutes et enregistres la mélodie dans ta mémoire.",
-        "house": "Serpentard"
-      }
-    ]
-  },
-  {
-    "text": "On t’offre un œuf de créature magique inconnu. Que fais-tu ?",
-    "options": [
-      {
-        "text": "Tu le couves toi-même, avec une couverture chaude.",
-        "house": "Gryffondor"
-      },
-      {
-        "text": "Tu compares sa texture à tous les œufs de créatures connues.",
-        "house": "Serdaigle"
-      },
-      {
-        "text": "Tu le caches pour voir ce qu’il devient en secret.",
-        "house": "Serpentard"
-      },
-      {
-        "text": "Tu construis un petit nid et le surveilles tendrement.",
-        "house": "Poufsouffle"
-      }
-    ]
-  },
-  {
-    "text": "Tu trouves une valise qui gronde quand on s’en approche. Que fais-tu ?",
-    "options": [
-      {
-        "text": "Tu analyses les vibrations pour deviner ce qu’il y a dedans.",
-        "house": "Serdaigle"
-      },
-      {
-        "text": "Tu t’approches lentement, baguette à la main.",
-        "house": "Gryffondor"
-      },
-      {
-        "text": "Tu mets une plume à l’intérieur pour voir si elle ressort.",
-        "house": "Serpentard"
-      },
-      {
-        "text": "Tu l’entoures de coussins au cas où elle exploserait.",
-        "house": "Poufsouffle"
-      }
-    ]
-  },
-  {
-    "text": "Le professeur t’autorise à créer un sort. Tu choisis lequel ?",
-    "options": [
-      {
-        "text": "Un sort qui inverse les mots de ton interlocuteur.",
-        "house": "Serpentard"
-      },
-      {
-        "text": "Un sort qui fait apparaître une armure brillante.",
-        "house": "Gryffondor"
-      },
-      {
-        "text": "Un sort qui fait pousser des fleurs à chaque pas.",
-        "house": "Poufsouffle"
-      },
-      {
-        "text": "Un sort qui permet de lire très vite.",
-        "house": "Serdaigle"
-      }
-    ]
-  },
-  {
-    "text": "Tu gagnes un tournoi magique. Que fais-tu de ton prix ?",
-    "options": [
-      {
-        "text": "Tu le conserves pour l'étudier de près.",
-        "house": "Serdaigle"
-      },
-      {
-        "text": "Tu le partages avec ton équipe.",
-        "house": "Poufsouffle"
-      },
-      {
-        "text": "Tu le brandis fièrement au milieu du dortoir.",
-        "house": "Gryffondor"
-      },
-      {
-        "text": "Tu l’utilises pour gagner encore plus.",
-        "house": "Serpentard"
-      }
-    ]
-  }
-]
+  "questions": [
+    {
+      "text": "Un fantôme t’invite à visiter un couloir interdit.",
+      "options": [
+        {
+          "text": "Tu acceptes sans hésiter, l’aventure t’appelle.",
+          "house": "Gryffondor"
+        },
+        {
+          "text": "Tu lui demandes s’il y a quelque chose à y gagner.",
+          "house": "Serpentard"
+        },
+        {
+          "text": "Tu proposes de prévenir un professeur d’abord.",
+          "house": "Poufsouffle"
+        },
+        {
+          "text": "Tu poses des questions sur l’histoire du couloir.",
+          "house": "Serdaigle"
+        }
+      ],
+      "categories": [
+        "Salles et lieux étranges"
+      ]
+    },
+    {
+      "text": "Un elfe de maison t’offre un objet magique oublié.",
+      "options": [
+        {
+          "text": "Tu l’acceptes avec gratitude, puis fonces l’essayer.",
+          "house": "Gryffondor"
+        },
+        {
+          "text": "Tu le caches, et fais des tests en secret.",
+          "house": "Serpentard"
+        },
+        {
+          "text": "Tu cherches à savoir à qui il appartient vraiment.",
+          "house": "Poufsouffle"
+        },
+        {
+          "text": "Tu l’étudies pendant des heures avant de l’utiliser.",
+          "house": "Serdaigle"
+        }
+      ],
+      "categories": [
+        "Autre"
+      ]
+    },
+    {
+      "text": "Tu entends des bruits étranges derrière une armoire dans ta salle commune.",
+      "options": [
+        {
+          "text": "Tu déplaces l’armoire pour découvrir la source.",
+          "house": "Gryffondor"
+        },
+        {
+          "text": "Tu écoutes et notes tout avant d’agir.",
+          "house": "Serdaigle"
+        },
+        {
+          "text": "Tu te demandes qui peut t’espionner et pour quelle raison.",
+          "house": "Serpentard"
+        },
+        {
+          "text": "Tu vas chercher de l’aide calmement.",
+          "house": "Poufsouffle"
+        }
+      ],
+      "categories": [
+        "Salles et lieux étranges"
+      ]
+    },
+    {
+      "text": "Un livre parle dès que tu l’ouvres.",
+      "options": [
+        {
+          "text": "Tu recherches des informations dans les livres.",
+          "house": "Serdaigle"
+        },
+        {
+          "text": "Tu entres directement pour voir.",
+          "house": "Gryffondor"
+        },
+        {
+          "text": "Tu impliques les autres dans la décision.",
+          "house": "Poufsouffle"
+        },
+        {
+          "text": "Tu réfléchis à une stratégie discrète.",
+          "house": "Serpentard"
+        }
+      ],
+      "categories": [
+        "Objets magiques"
+      ]
+    },
+    {
+      "text": "Un escalier change de destination en plein trajet.",
+      "options": [
+        {
+          "text": "Tu fais preuve de patience.",
+          "house": "Poufsouffle"
+        },
+        {
+          "text": "Tu entres directement pour voir.",
+          "house": "Gryffondor"
+        },
+        {
+          "text": "Tu recherches des informations dans les livres.",
+          "house": "Serdaigle"
+        },
+        {
+          "text": "Tu réfléchis à une stratégie discrète.",
+          "house": "Serpentard"
+        }
+      ],
+      "categories": [
+        "Salles et lieux étranges"
+      ]
+    },
+    {
+      "text": "Une plume écrit tes pensées sans que tu le veuilles.",
+      "options": [
+        {
+          "text": "Tu demandes conseil à quelqu’un de confiance.",
+          "house": "Poufsouffle"
+        },
+        {
+          "text": "Tu analyses les indices en détail.",
+          "house": "Serdaigle"
+        },
+        {
+          "text": "Tu entres directement pour voir.",
+          "house": "Gryffondor"
+        },
+        {
+          "text": "Tu envisages ce que cela peut t’apporter.",
+          "house": "Serpentard"
+        }
+      ],
+      "categories": [
+        "Objets magiques"
+      ]
+    },
+    {
+      "text": "Une créature inconnue apparaît dans la cour.",
+      "options": [
+        {
+          "text": "Tu questionnes la logique derrière cela.",
+          "house": "Serdaigle"
+        },
+        {
+          "text": "Tu préfères une réponse juste et paisible.",
+          "house": "Poufsouffle"
+        },
+        {
+          "text": "Tu manigances un plan en silence.",
+          "house": "Serpentard"
+        },
+        {
+          "text": "Tu agis sans hésiter.",
+          "house": "Gryffondor"
+        }
+      ],
+      "categories": [
+        "Créatures magiques"
+      ]
+    },
+    {
+      "text": "Ton balai refuse d’obéir pendant un entraînement.",
+      "options": [
+        {
+          "text": "Tu observes et caches ta réaction.",
+          "house": "Serpentard"
+        },
+        {
+          "text": "Tu prends les devants, quitte à risquer.",
+          "house": "Gryffondor"
+        },
+        {
+          "text": "Tu recherches des informations dans les livres.",
+          "house": "Serdaigle"
+        },
+        {
+          "text": "Tu préfères une réponse juste et paisible.",
+          "house": "Poufsouffle"
+        }
+      ],
+      "categories": [
+        "Autre"
+      ]
+    },
+    {
+      "text": "Tu reçois une lettre écrite dans une langue ancienne.",
+      "options": [
+        {
+          "text": "Tu demandes conseil à quelqu’un de confiance.",
+          "house": "Poufsouffle"
+        },
+        {
+          "text": "Tu réfléchis à une stratégie discrète.",
+          "house": "Serpentard"
+        },
+        {
+          "text": "Tu affrontes la situation tête haute.",
+          "house": "Gryffondor"
+        },
+        {
+          "text": "Tu prends le temps de comprendre.",
+          "house": "Serdaigle"
+        }
+      ],
+      "categories": [
+        "Objets magiques"
+      ]
+    },
+    {
+      "text": "Un miroir te montre une autre version de toi-même.",
+      "options": [
+        {
+          "text": "Tu demandes conseil à quelqu’un de confiance.",
+          "house": "Poufsouffle"
+        },
+        {
+          "text": "Tu analyses les indices en détail.",
+          "house": "Serdaigle"
+        },
+        {
+          "text": "Tu agis sans hésiter.",
+          "house": "Gryffondor"
+        },
+        {
+          "text": "Tu observes et caches ta réaction.",
+          "house": "Serpentard"
+        }
+      ],
+      "categories": [
+        "Objets magiques"
+      ]
+    },
+    {
+      "text": "Une potion se prépare toute seule sur ton bureau.",
+      "options": [
+        {
+          "text": "Tu observes et caches ta réaction.",
+          "house": "Serpentard"
+        },
+        {
+          "text": "Tu questionnes la logique derrière cela.",
+          "house": "Serdaigle"
+        },
+        {
+          "text": "Tu impliques les autres dans la décision.",
+          "house": "Poufsouffle"
+        },
+        {
+          "text": "Tu agis sans hésiter.",
+          "house": "Gryffondor"
+        }
+      ],
+      "categories": [
+        "Sorts & potions"
+      ]
+    },
+    {
+      "text": "Ton ombre bouge indépendamment.",
+      "options": [
+        {
+          "text": "Tu impliques les autres dans la décision.",
+          "house": "Poufsouffle"
+        },
+        {
+          "text": "Tu affrontes la situation tête haute.",
+          "house": "Gryffondor"
+        },
+        {
+          "text": "Tu analyses les indices en détail.",
+          "house": "Serdaigle"
+        },
+        {
+          "text": "Tu manigances un plan en silence.",
+          "house": "Serpentard"
+        }
+      ],
+      "categories": [
+        "Phénomènes étranges"
+      ]
+    },
+    {
+      "text": "Un professeur t’invite à un duel inattendu.",
+      "options": [
+        {
+          "text": "Tu fais preuve de patience.",
+          "house": "Poufsouffle"
+        },
+        {
+          "text": "Tu recherches des informations dans les livres.",
+          "house": "Serdaigle"
+        },
+        {
+          "text": "Tu observes et caches ta réaction.",
+          "house": "Serpentard"
+        },
+        {
+          "text": "Tu affrontes la situation tête haute.",
+          "house": "Gryffondor"
+        }
+      ],
+      "categories": [
+        "Relations & interactions"
+      ]
+    },
+    {
+      "text": "Un parchemin brille lorsque tu l’effleures.",
+      "options": [
+        {
+          "text": "Tu demandes conseil à quelqu’un de confiance.",
+          "house": "Poufsouffle"
+        },
+        {
+          "text": "Tu affrontes la situation tête haute.",
+          "house": "Gryffondor"
+        },
+        {
+          "text": "Tu observes et caches ta réaction.",
+          "house": "Serpentard"
+        },
+        {
+          "text": "Tu questionnes la logique derrière cela.",
+          "house": "Serdaigle"
+        }
+      ],
+      "categories": [
+        "Objets magiques"
+      ]
+    },
+    {
+      "text": "Un camarade se comporte bizarrement depuis ce matin.",
+      "options": [
+        {
+          "text": "Tu préfères une réponse juste et paisible.",
+          "house": "Poufsouffle"
+        },
+        {
+          "text": "Tu prends les devants, quitte à risquer.",
+          "house": "Gryffondor"
+        },
+        {
+          "text": "Tu prends le temps de comprendre.",
+          "house": "Serdaigle"
+        },
+        {
+          "text": "Tu manigances un plan en silence.",
+          "house": "Serpentard"
+        }
+      ],
+      "categories": [
+        "Autre"
+      ]
+    },
+    {
+      "text": "Un tableau t’appelle par ton prénom.",
+      "options": [
+        {
+          "text": "Tu prends les devants, quitte à risquer.",
+          "house": "Gryffondor"
+        },
+        {
+          "text": "Tu envisages ce que cela peut t’apporter.",
+          "house": "Serpentard"
+        },
+        {
+          "text": "Tu fais preuve de patience.",
+          "house": "Poufsouffle"
+        },
+        {
+          "text": "Tu recherches des informations dans les livres.",
+          "house": "Serdaigle"
+        }
+      ],
+      "categories": [
+        "Autre"
+      ]
+    },
+    {
+      "text": "Un sort échappe à ton contrôle en classe.",
+      "options": [
+        {
+          "text": "Tu prends le temps de comprendre.",
+          "house": "Serdaigle"
+        },
+        {
+          "text": "Tu observes et caches ta réaction.",
+          "house": "Serpentard"
+        },
+        {
+          "text": "Tu fais preuve de patience.",
+          "house": "Poufsouffle"
+        },
+        {
+          "text": "Tu affrontes la situation tête haute.",
+          "house": "Gryffondor"
+        }
+      ],
+      "categories": [
+        "Sorts & potions"
+      ]
+    },
+    {
+      "text": "Tu entends une voix dans un endroit vide.",
+      "options": [
+        {
+          "text": "Tu entres directement pour voir.",
+          "house": "Gryffondor"
+        },
+        {
+          "text": "Tu fais preuve de patience.",
+          "house": "Poufsouffle"
+        },
+        {
+          "text": "Tu questionnes la logique derrière cela.",
+          "house": "Serdaigle"
+        },
+        {
+          "text": "Tu manigances un plan en silence.",
+          "house": "Serpentard"
+        }
+      ],
+      "categories": [
+        "Phénomènes étranges"
+      ]
+    },
+    {
+      "text": "Une clef apparaît dans ta poche sans explication.",
+      "options": [
+        {
+          "text": "Tu envisages ce que cela peut t’apporter.",
+          "house": "Serpentard"
+        },
+        {
+          "text": "Tu agis sans hésiter.",
+          "house": "Gryffondor"
+        },
+        {
+          "text": "Tu recherches des informations dans les livres.",
+          "house": "Serdaigle"
+        },
+        {
+          "text": "Tu préfères une réponse juste et paisible.",
+          "house": "Poufsouffle"
+        }
+      ],
+      "categories": [
+        "Autre"
+      ]
+    },
+    {
+      "text": "Un animal t'observe étrangement tous les jours.",
+      "options": [
+        {
+          "text": "Tu préfères une réponse juste et paisible.",
+          "house": "Poufsouffle"
+        },
+        {
+          "text": "Tu recherches des informations dans les livres.",
+          "house": "Serdaigle"
+        },
+        {
+          "text": "Tu agis sans hésiter.",
+          "house": "Gryffondor"
+        },
+        {
+          "text": "Tu manigances un plan en silence.",
+          "house": "Serpentard"
+        }
+      ],
+      "categories": [
+        "Créatures magiques"
+      ]
+    },
+    {
+      "text": "Une porte te demande une énigme pour s’ouvrir.",
+      "options": [
+        {
+          "text": "Tu envisages ce que cela peut t’apporter.",
+          "house": "Serpentard"
+        },
+        {
+          "text": "Tu demandes conseil à quelqu’un de confiance.",
+          "house": "Poufsouffle"
+        },
+        {
+          "text": "Tu prends le temps de comprendre.",
+          "house": "Serdaigle"
+        },
+        {
+          "text": "Tu affrontes la situation tête haute.",
+          "house": "Gryffondor"
+        }
+      ],
+      "categories": [
+        "Enigmes & mystères"
+      ]
+    },
+    {
+      "text": "Ton lit est déplacé pendant la nuit.",
+      "options": [
+        {
+          "text": "Tu préfères une réponse juste et paisible.",
+          "house": "Poufsouffle"
+        },
+        {
+          "text": "Tu recherches des informations dans les livres.",
+          "house": "Serdaigle"
+        },
+        {
+          "text": "Tu affrontes la situation tête haute.",
+          "house": "Gryffondor"
+        },
+        {
+          "text": "Tu manigances un plan en silence.",
+          "house": "Serpentard"
+        }
+      ],
+      "categories": [
+        "Autre"
+      ]
+    },
+    {
+      "text": "Des objets lévitent sans raison dans la salle d’étude.",
+      "options": [
+        {
+          "text": "Tu entres directement pour voir.",
+          "house": "Gryffondor"
+        },
+        {
+          "text": "Tu fais preuve de patience.",
+          "house": "Poufsouffle"
+        },
+        {
+          "text": "Tu réfléchis à une stratégie discrète.",
+          "house": "Serpentard"
+        },
+        {
+          "text": "Tu questionnes la logique derrière cela.",
+          "house": "Serdaigle"
+        }
+      ],
+      "categories": [
+        "Salles et lieux étranges"
+      ]
+    },
+    {
+      "text": "Tu découvres un passage inconnu près de la cuisine.",
+      "options": [
+        {
+          "text": "Tu analyses les indices en détail.",
+          "house": "Serdaigle"
+        },
+        {
+          "text": "Tu fais preuve de patience.",
+          "house": "Poufsouffle"
+        },
+        {
+          "text": "Tu envisages ce que cela peut t’apporter.",
+          "house": "Serpentard"
+        },
+        {
+          "text": "Tu prends les devants, quitte à risquer.",
+          "house": "Gryffondor"
+        }
+      ],
+      "categories": [
+        "Salles et lieux étranges"
+      ]
+    },
+    {
+      "text": "Un hibou dépose une lettre enflammée.",
+      "options": [
+        {
+          "text": "Tu fais preuve de patience.",
+          "house": "Poufsouffle"
+        },
+        {
+          "text": "Tu affrontes la situation tête haute.",
+          "house": "Gryffondor"
+        },
+        {
+          "text": "Tu observes et caches ta réaction.",
+          "house": "Serpentard"
+        },
+        {
+          "text": "Tu recherches des informations dans les livres.",
+          "house": "Serdaigle"
+        }
+      ],
+      "categories": [
+        "Créatures magiques",
+        "Objets magiques"
+      ]
+    },
+    {
+      "text": "Une bibliothèque secrète s’ouvre devant toi.",
+      "options": [
+        {
+          "text": "Tu affrontes la situation tête haute.",
+          "house": "Gryffondor"
+        },
+        {
+          "text": "Tu envisages ce que cela peut t’apporter.",
+          "house": "Serpentard"
+        },
+        {
+          "text": "Tu impliques les autres dans la décision.",
+          "house": "Poufsouffle"
+        },
+        {
+          "text": "Tu questionnes la logique derrière cela.",
+          "house": "Serdaigle"
+        }
+      ],
+      "categories": [
+        "Salles et lieux étranges"
+      ]
+    },
+    {
+      "text": "Ton chaudron change de couleur tout seul.",
+      "options": [
+        {
+          "text": "Tu entres directement pour voir.",
+          "house": "Gryffondor"
+        },
+        {
+          "text": "Tu recherches des informations dans les livres.",
+          "house": "Serdaigle"
+        },
+        {
+          "text": "Tu préfères une réponse juste et paisible.",
+          "house": "Poufsouffle"
+        },
+        {
+          "text": "Tu manigances un plan en silence.",
+          "house": "Serpentard"
+        }
+      ],
+      "categories": [
+        "Objets magiques"
+      ]
+    },
+    {
+      "text": "Un serpent te parle dans un rêve.",
+      "options": [
+        {
+          "text": "Tu observes et caches ta réaction.",
+          "house": "Serpentard"
+        },
+        {
+          "text": "Tu analyses les indices en détail.",
+          "house": "Serdaigle"
+        },
+        {
+          "text": "Tu entres directement pour voir.",
+          "house": "Gryffondor"
+        },
+        {
+          "text": "Tu fais preuve de patience.",
+          "house": "Poufsouffle"
+        }
+      ],
+      "categories": [
+        "Créatures magiques"
+      ]
+    },
+    {
+      "text": "Un journal t’écrit de lui-même.",
+      "options": [
+        {
+          "text": "Tu analyses les indices en détail.",
+          "house": "Serdaigle"
+        },
+        {
+          "text": "Tu observes et caches ta réaction.",
+          "house": "Serpentard"
+        },
+        {
+          "text": "Tu prends les devants, quitte à risquer.",
+          "house": "Gryffondor"
+        },
+        {
+          "text": "Tu demandes conseil à quelqu’un de confiance.",
+          "house": "Poufsouffle"
+        }
+      ],
+      "categories": [
+        "Autre"
+      ]
+    },
+    {
+      "text": "Un coffre s’ouvre dès que tu penses à un souvenir.",
+      "options": [
+        {
+          "text": "Tu prends les devants, quitte à risquer.",
+          "house": "Gryffondor"
+        },
+        {
+          "text": "Tu demandes conseil à quelqu’un de confiance.",
+          "house": "Poufsouffle"
+        },
+        {
+          "text": "Tu envisages ce que cela peut t’apporter.",
+          "house": "Serpentard"
+        },
+        {
+          "text": "Tu questionnes la logique derrière cela.",
+          "house": "Serdaigle"
+        }
+      ],
+      "categories": [
+        "Phénomènes étranges"
+      ]
+    },
+    {
+      "text": "Une vieille horloge clignote en vert quand tu t’approches.",
+      "options": [
+        {
+          "text": "Tu entres directement pour voir.",
+          "house": "Gryffondor"
+        },
+        {
+          "text": "Tu analyses les indices en détail.",
+          "house": "Serdaigle"
+        },
+        {
+          "text": "Tu fais preuve de patience.",
+          "house": "Poufsouffle"
+        },
+        {
+          "text": "Tu observes et caches ta réaction.",
+          "house": "Serpentard"
+        }
+      ],
+      "categories": [
+        "Autre"
+      ]
+    },
+    {
+      "text": "Une salle remplie de miroirs se révèle derrière une tenture.",
+      "options": [
+        {
+          "text": "Tu impliques les autres dans la décision.",
+          "house": "Poufsouffle"
+        },
+        {
+          "text": "Tu affrontes la situation tête haute.",
+          "house": "Gryffondor"
+        },
+        {
+          "text": "Tu envisages ce que cela peut t’apporter.",
+          "house": "Serpentard"
+        },
+        {
+          "text": "Tu analyses les indices en détail.",
+          "house": "Serdaigle"
+        }
+      ],
+      "categories": [
+        "Objets magiques",
+        "Salles et lieux étranges"
+      ]
+    },
+    {
+      "text": "Un blason ancien s’illumine sous ta main.",
+      "options": [
+        {
+          "text": "Tu affrontes la situation tête haute.",
+          "house": "Gryffondor"
+        },
+        {
+          "text": "Tu observes et caches ta réaction.",
+          "house": "Serpentard"
+        },
+        {
+          "text": "Tu questionnes la logique derrière cela.",
+          "house": "Serdaigle"
+        },
+        {
+          "text": "Tu demandes conseil à quelqu’un de confiance.",
+          "house": "Poufsouffle"
+        }
+      ],
+      "categories": [
+        "Autre"
+      ]
+    },
+    {
+      "text": "Un camarade te donne une énigme codée.",
+      "options": [
+        {
+          "text": "Tu recherches des informations dans les livres.",
+          "house": "Serdaigle"
+        },
+        {
+          "text": "Tu observes et caches ta réaction.",
+          "house": "Serpentard"
+        },
+        {
+          "text": "Tu impliques les autres dans la décision.",
+          "house": "Poufsouffle"
+        },
+        {
+          "text": "Tu prends les devants, quitte à risquer.",
+          "house": "Gryffondor"
+        }
+      ],
+      "categories": [
+        "Enigmes & mystères"
+      ]
+    },
+    {
+      "text": "Une voix annonce ton nom dans un couloir vide.",
+      "options": [
+        {
+          "text": "Tu agis sans hésiter.",
+          "house": "Gryffondor"
+        },
+        {
+          "text": "Tu observes et caches ta réaction.",
+          "house": "Serpentard"
+        },
+        {
+          "text": "Tu questionnes la logique derrière cela.",
+          "house": "Serdaigle"
+        },
+        {
+          "text": "Tu impliques les autres dans la décision.",
+          "house": "Poufsouffle"
+        }
+      ],
+      "categories": [
+        "Phénomènes étranges",
+        "Salles et lieux étranges"
+      ]
+    },
+    {
+      "text": "Un sort te donne temporairement une autre personnalité.",
+      "options": [
+        {
+          "text": "Tu envisages ce que cela peut t’apporter.",
+          "house": "Serpentard"
+        },
+        {
+          "text": "Tu affrontes la situation tête haute.",
+          "house": "Gryffondor"
+        },
+        {
+          "text": "Tu préfères une réponse juste et paisible.",
+          "house": "Poufsouffle"
+        },
+        {
+          "text": "Tu recherches des informations dans les livres.",
+          "house": "Serdaigle"
+        }
+      ],
+      "categories": [
+        "Sorts & potions"
+      ]
+    },
+    {
+      "text": "Une salle commune se transforme sous tes yeux.",
+      "options": [
+        {
+          "text": "Tu prends le temps de comprendre.",
+          "house": "Serdaigle"
+        },
+        {
+          "text": "Tu observes et caches ta réaction.",
+          "house": "Serpentard"
+        },
+        {
+          "text": "Tu affrontes la situation tête haute.",
+          "house": "Gryffondor"
+        },
+        {
+          "text": "Tu préfères une réponse juste et paisible.",
+          "house": "Poufsouffle"
+        }
+      ],
+      "categories": [
+        "Salles et lieux étranges"
+      ]
+    },
+    {
+      "text": "Une lettre flotte dans les airs en t’attendant.",
+      "options": [
+        {
+          "text": "Tu préfères une réponse juste et paisible.",
+          "house": "Poufsouffle"
+        },
+        {
+          "text": "Tu affrontes la situation tête haute.",
+          "house": "Gryffondor"
+        },
+        {
+          "text": "Tu analyses les indices en détail.",
+          "house": "Serdaigle"
+        },
+        {
+          "text": "Tu envisages ce que cela peut t’apporter.",
+          "house": "Serpentard"
+        }
+      ],
+      "categories": [
+        "Objets magiques"
+      ]
+    },
+    {
+      "text": "Un petit dragon s’échappe d’une boîte en bois.",
+      "options": [
+        {
+          "text": "Tu impliques les autres dans la décision.",
+          "house": "Poufsouffle"
+        },
+        {
+          "text": "Tu observes et caches ta réaction.",
+          "house": "Serpentard"
+        },
+        {
+          "text": "Tu recherches des informations dans les livres.",
+          "house": "Serdaigle"
+        },
+        {
+          "text": "Tu agis sans hésiter.",
+          "house": "Gryffondor"
+        }
+      ],
+      "categories": [
+        "Créatures magiques"
+      ]
+    },
+    {
+      "text": "Un tableau te raconte un secret sur un professeur.",
+      "options": [
+        {
+          "text": "Tu entres directement pour voir.",
+          "house": "Gryffondor"
+        },
+        {
+          "text": "Tu prends le temps de comprendre.",
+          "house": "Serdaigle"
+        },
+        {
+          "text": "Tu préfères une réponse juste et paisible.",
+          "house": "Poufsouffle"
+        },
+        {
+          "text": "Tu réfléchis à une stratégie discrète.",
+          "house": "Serpentard"
+        }
+      ],
+      "categories": [
+        "Enigmes & mystères",
+        "Relations & interactions"
+      ]
+    },
+    {
+      "text": "Un escalier t’amène dans un autre temps.",
+      "options": [
+        {
+          "text": "Tu envisages ce que cela peut t’apporter.",
+          "house": "Serpentard"
+        },
+        {
+          "text": "Tu agis sans hésiter.",
+          "house": "Gryffondor"
+        },
+        {
+          "text": "Tu impliques les autres dans la décision.",
+          "house": "Poufsouffle"
+        },
+        {
+          "text": "Tu analyses les indices en détail.",
+          "house": "Serdaigle"
+        }
+      ],
+      "categories": [
+        "Phénomènes étranges",
+        "Salles et lieux étranges"
+      ]
+    },
+    {
+      "text": "Un nuage violet plane au-dessus de ton lit.",
+      "options": [
+        {
+          "text": "Tu envisages ce que cela peut t’apporter.",
+          "house": "Serpentard"
+        },
+        {
+          "text": "Tu entres directement pour voir.",
+          "house": "Gryffondor"
+        },
+        {
+          "text": "Tu prends le temps de comprendre.",
+          "house": "Serdaigle"
+        },
+        {
+          "text": "Tu fais preuve de patience.",
+          "house": "Poufsouffle"
+        }
+      ],
+      "categories": [
+        "Autre"
+      ]
+    },
+    {
+      "text": "Une plume ancienne te murmure des sorts oubliés.",
+      "options": [
+        {
+          "text": "Tu demandes conseil à quelqu’un de confiance.",
+          "house": "Poufsouffle"
+        },
+        {
+          "text": "Tu observes et caches ta réaction.",
+          "house": "Serpentard"
+        },
+        {
+          "text": "Tu affrontes la situation tête haute.",
+          "house": "Gryffondor"
+        },
+        {
+          "text": "Tu questionnes la logique derrière cela.",
+          "house": "Serdaigle"
+        }
+      ],
+      "categories": [
+        "Objets magiques",
+        "Sorts & potions"
+      ]
+    },
+    {
+      "text": "Tu reçois une cape cousue d’énigmes.",
+      "options": [
+        {
+          "text": "Tu manigances un plan en silence.",
+          "house": "Serpentard"
+        },
+        {
+          "text": "Tu fais preuve de patience.",
+          "house": "Poufsouffle"
+        },
+        {
+          "text": "Tu prends les devants, quitte à risquer.",
+          "house": "Gryffondor"
+        },
+        {
+          "text": "Tu prends le temps de comprendre.",
+          "house": "Serdaigle"
+        }
+      ],
+      "categories": [
+        "Enigmes & mystères",
+        "Objets magiques"
+      ]
+    },
+    {
+      "text": "Un sort de silence affecte ta salle de classe.",
+      "options": [
+        {
+          "text": "Tu fais preuve de patience.",
+          "house": "Poufsouffle"
+        },
+        {
+          "text": "Tu affrontes la situation tête haute.",
+          "house": "Gryffondor"
+        },
+        {
+          "text": "Tu envisages ce que cela peut t’apporter.",
+          "house": "Serpentard"
+        },
+        {
+          "text": "Tu analyses les indices en détail.",
+          "house": "Serdaigle"
+        }
+      ],
+      "categories": [
+        "Salles et lieux étranges",
+        "Sorts & potions"
+      ]
+    },
+    {
+      "text": "Un duel magique est organisé sans prévenir.",
+      "options": [
+        {
+          "text": "Tu impliques les autres dans la décision.",
+          "house": "Poufsouffle"
+        },
+        {
+          "text": "Tu observes et caches ta réaction.",
+          "house": "Serpentard"
+        },
+        {
+          "text": "Tu agis sans hésiter.",
+          "house": "Gryffondor"
+        },
+        {
+          "text": "Tu recherches des informations dans les livres.",
+          "house": "Serdaigle"
+        }
+      ],
+      "categories": [
+        "Autre"
+      ]
+    },
+    {
+      "text": "Un objet familial se transforme mystérieusement.",
+      "options": [
+        {
+          "text": "Tu envisages ce que cela peut t’apporter.",
+          "house": "Serpentard"
+        },
+        {
+          "text": "Tu prends les devants, quitte à risquer.",
+          "house": "Gryffondor"
+        },
+        {
+          "text": "Tu impliques les autres dans la décision.",
+          "house": "Poufsouffle"
+        },
+        {
+          "text": "Tu prends le temps de comprendre.",
+          "house": "Serdaigle"
+        }
+      ],
+      "categories": [
+        "Relations & interactions"
+      ]
+    },
+    {
+      "text": "Un hibou nocturne refuse de s’en aller.",
+      "options": [
+        {
+          "text": "Tu entres directement pour voir.",
+          "house": "Gryffondor"
+        },
+        {
+          "text": "Tu prends le temps de comprendre.",
+          "house": "Serdaigle"
+        },
+        {
+          "text": "Tu réfléchis à une stratégie discrète.",
+          "house": "Serpentard"
+        },
+        {
+          "text": "Tu demandes conseil à quelqu’un de confiance.",
+          "house": "Poufsouffle"
+        }
+      ],
+      "categories": [
+        "Créatures magiques"
+      ]
+    },
+    {
+      "text": "Un livre interdit t'appelle depuis une étagère haute.",
+      "options": [
+        {
+          "text": "Tu recherches des informations dans les livres.",
+          "house": "Serdaigle"
+        },
+        {
+          "text": "Tu demandes conseil à quelqu’un de confiance.",
+          "house": "Poufsouffle"
+        },
+        {
+          "text": "Tu réfléchis à une stratégie discrète.",
+          "house": "Serpentard"
+        },
+        {
+          "text": "Tu prends les devants, quitte à risquer.",
+          "house": "Gryffondor"
+        }
+      ],
+      "categories": [
+        "Objets magiques"
+      ]
+    },
+    {
+      "text": "Un feu vert brûle dans la cheminée de la salle commune.",
+      "options": [
+        {
+          "text": "Tu entres directement pour voir.",
+          "house": "Gryffondor"
+        },
+        {
+          "text": "Tu réfléchis à une stratégie discrète.",
+          "house": "Serpentard"
+        },
+        {
+          "text": "Tu recherches des informations dans les livres.",
+          "house": "Serdaigle"
+        },
+        {
+          "text": "Tu demandes conseil à quelqu’un de confiance.",
+          "house": "Poufsouffle"
+        }
+      ],
+      "categories": [
+        "Salles et lieux étranges"
+      ]
+    },
+    {
+      "text": "Un petit être lumineux vole autour de toi.",
+      "options": [
+        {
+          "text": "Tu prends le temps de comprendre.",
+          "house": "Serdaigle"
+        },
+        {
+          "text": "Tu affrontes la situation tête haute.",
+          "house": "Gryffondor"
+        },
+        {
+          "text": "Tu envisages ce que cela peut t’apporter.",
+          "house": "Serpentard"
+        },
+        {
+          "text": "Tu préfères une réponse juste et paisible.",
+          "house": "Poufsouffle"
+        }
+      ],
+      "categories": [
+        "Autre"
+      ]
+    },
+    {
+      "text": "Une pluie de lettres tombe dans la Grande Salle.",
+      "options": [
+        {
+          "text": "Tu impliques les autres dans la décision.",
+          "house": "Poufsouffle"
+        },
+        {
+          "text": "Tu manigances un plan en silence.",
+          "house": "Serpentard"
+        },
+        {
+          "text": "Tu prends les devants, quitte à risquer.",
+          "house": "Gryffondor"
+        },
+        {
+          "text": "Tu prends le temps de comprendre.",
+          "house": "Serdaigle"
+        }
+      ],
+      "categories": [
+        "Objets magiques",
+        "Salles et lieux étranges"
+      ]
+    },
+    {
+      "text": "Un élève t’accuse d’un sort que tu n’as pas lancé.",
+      "options": [
+        {
+          "text": "Tu agis sans hésiter.",
+          "house": "Gryffondor"
+        },
+        {
+          "text": "Tu manigances un plan en silence.",
+          "house": "Serpentard"
+        },
+        {
+          "text": "Tu impliques les autres dans la décision.",
+          "house": "Poufsouffle"
+        },
+        {
+          "text": "Tu recherches des informations dans les livres.",
+          "house": "Serdaigle"
+        }
+      ],
+      "categories": [
+        "Relations & interactions",
+        "Sorts & potions"
+      ]
+    },
+    {
+      "text": "Une araignée géante tisse des mots sur un mur de la salle de classe.",
+      "options": [
+        {
+          "text": "Tu lui demandes de t'apprendre.",
+          "house": "Gryffondor"
+        },
+        {
+          "text": "Tu notes chaque mot pour une analyse.",
+          "house": "Serdaigle"
+        },
+        {
+          "text": "Tu lui offres un coin tranquille.",
+          "house": "Poufsouffle"
+        },
+        {
+          "text": "Tu tentes de détourner son attention pour lire plus vite.",
+          "house": "Serpentard"
+        }
+      ],
+      "categories": [
+        "Salles et lieux étranges"
+      ]
+    },
+    {
+      "text": "Un bébé phénix apparaît dans ton sac.",
+      "options": [
+        {
+          "text": "Tu cries de joie et le montres à tout le monde.",
+          "house": "Gryffondor"
+        },
+        {
+          "text": "Tu étudies son plumage pour en identifier l'espèce.",
+          "house": "Serdaigle"
+        },
+        {
+          "text": "Tu lui construis un petit nid douillet.",
+          "house": "Poufsouffle"
+        },
+        {
+          "text": "Tu cherches comment en faire éclore d'autres.",
+          "house": "Serpentard"
+        }
+      ],
+      "categories": [
+        "Autre"
+      ]
+    },
+    {
+      "text": "Une colonie de gnomes chante sous ta fenêtre.",
+      "options": [
+        {
+          "text": "Tu tapes des mains et les rejoins.",
+          "house": "Gryffondor"
+        },
+        {
+          "text": "Tu enregistres leur chanson pour l’analyser.",
+          "house": "Serdaigle"
+        },
+        {
+          "text": "Tu leur offres du pain.",
+          "house": "Poufsouffle"
+        },
+        {
+          "text": "Tu modifies les paroles pour qu’elles parlent de toi.",
+          "house": "Serpentard"
+        }
+      ],
+      "categories": [
+        "Phénomènes étranges"
+      ]
+    },
+    {
+      "text": "Une grenouille géante refuse de bouger de ton lit.",
+      "options": [
+        {
+          "text": "Tu la pousses doucement et dors à côté.",
+          "house": "Gryffondor"
+        },
+        {
+          "text": "Tu l'observes et prends des notes comportementales.",
+          "house": "Serdaigle"
+        },
+        {
+          "text": "Tu lui chantes une berceuse pour qu’elle parte.",
+          "house": "Poufsouffle"
+        },
+        {
+          "text": "Tu promets de la nourrir si elle obéit.",
+          "house": "Serpentard"
+        }
+      ],
+      "categories": [
+        "Autre"
+      ]
+    },
+    {
+      "text": "Un écureuil invisible vole tes biscuits tous les soirs.",
+      "options": [
+        {
+          "text": "Tu te caches pour l’attraper en pleine action.",
+          "house": "Gryffondor"
+        },
+        {
+          "text": "Tu crées une carte de ses apparitions.",
+          "house": "Serdaigle"
+        },
+        {
+          "text": "Tu lui laisses une note et des miettes.",
+          "house": "Poufsouffle"
+        },
+        {
+          "text": "Tu mets un sort de traçage sur les biscuits.",
+          "house": "Serpentard"
+        }
+      ],
+      "categories": [
+        "Autre"
+      ]
+    },
+    {
+      "text": "Un hippocampe saute dans ta baignoire.",
+      "options": [
+        {
+          "text": "Tu essaies de le chevaucher.",
+          "house": "Gryffondor"
+        },
+        {
+          "text": "Tu le compares aux dessins de tes livres.",
+          "house": "Serdaigle"
+        },
+        {
+          "text": "Tu le protèges avec des serviettes chaudes.",
+          "house": "Poufsouffle"
+        },
+        {
+          "text": "Tu regardes s’il peut t’emmener ailleurs.",
+          "house": "Serpentard"
+        }
+      ],
+      "categories": [
+        "Autre"
+      ]
+    },
+    {
+      "text": "Un mini troll se coince dans ton casier.",
+      "options": [
+        {
+          "text": "Tu essaies de le calmer avec des blagues.",
+          "house": "Gryffondor"
+        },
+        {
+          "text": "Tu mesures sa taille et ses cris.",
+          "house": "Serdaigle"
+        },
+        {
+          "text": "Tu lui fais un escalier pour sortir.",
+          "house": "Poufsouffle"
+        },
+        {
+          "text": "Tu l’enfermes et observes sa réaction.",
+          "house": "Serpentard"
+        }
+      ],
+      "categories": [
+        "Autre"
+      ]
+    },
+    {
+      "text": "Ton crayon se transforme en flûte magique.",
+      "options": [
+        {
+          "text": "Tu joues un air pour tester sa puissance.",
+          "house": "Gryffondor"
+        },
+        {
+          "text": "Tu notes les notes jouées et leurs effets.",
+          "house": "Serdaigle"
+        },
+        {
+          "text": "Tu en fais un concert pour la classe.",
+          "house": "Poufsouffle"
+        },
+        {
+          "text": "Tu regardes s’il influence les autres élèves.",
+          "house": "Serpentard"
+        }
+      ],
+      "categories": [
+        "Autre"
+      ]
+    },
+    {
+      "text": "Tu inventes une potion qui rend tout collant.",
+      "options": [
+        {
+          "text": "Tu lances des défis avec des objets gluants.",
+          "house": "Gryffondor"
+        },
+        {
+          "text": "Tu testes sa viscosité sur différents matériaux.",
+          "house": "Serdaigle"
+        },
+        {
+          "text": "Tu nettoies tout avant que ça colle trop.",
+          "house": "Poufsouffle"
+        },
+        {
+          "text": "Tu colles les affaires d’un rival en douce.",
+          "house": "Serpentard"
+        }
+      ],
+      "categories": [
+        "Sorts & potions"
+      ]
+    },
+    {
+      "text": "Un sort te donne une moustache parlante.",
+      "options": [
+        {
+          "text": "Tu dialogues avec elle dans le miroir.",
+          "house": "Gryffondor"
+        },
+        {
+          "text": "Tu enregistres ses propos pour un devoir.",
+          "house": "Serdaigle"
+        },
+        {
+          "text": "Tu lui donnes un prénom et l’apprivoises.",
+          "house": "Poufsouffle"
+        },
+        {
+          "text": "Tu la convaincs de t’aider pendant les cours.",
+          "house": "Serpentard"
+        }
+      ],
+      "categories": [
+        "Sorts & potions"
+      ]
+    },
+    {
+      "text": "Tu fais un rêve où tu lances des sorts en dormant.",
+      "options": [
+        {
+          "text": "Tu essaies de reproduire ces sorts éveillé.",
+          "house": "Gryffondor"
+        },
+        {
+          "text": "Tu rédiges un journal de rêves magiques.",
+          "house": "Serdaigle"
+        },
+        {
+          "text": "Tu demandes à tes amis s’ils rêvent aussi.",
+          "house": "Poufsouffle"
+        },
+        {
+          "text": "Tu testes ces sorts dans le couloir de nuit.",
+          "house": "Serpentard"
+        }
+      ],
+      "categories": [
+        "Sorts & potions"
+      ]
+    },
+    {
+      "text": "Ta baguette éternue et lance un sort au hasard.",
+      "options": [
+        {
+          "text": "Tu la secoues et ris de l’effet produit.",
+          "house": "Gryffondor"
+        },
+        {
+          "text": "Tu répertories les sorts involontaires.",
+          "house": "Serdaigle"
+        },
+        {
+          "text": "Tu la couvres avec un mouchoir magique.",
+          "house": "Poufsouffle"
+        },
+        {
+          "text": "Tu profites du chaos pour étudier discrètement.",
+          "house": "Serpentard"
+        }
+      ],
+      "categories": [
+        "Sorts & potions"
+      ]
+    },
+    {
+      "text": "Une formule que tu dis par erreur fait danser tes chaussures.",
+      "options": [
+        {
+          "text": "Tu organises un concours de claquettes.",
+          "house": "Gryffondor"
+        },
+        {
+          "text": "Tu mesures la durée de l’enchantement.",
+          "house": "Serdaigle"
+        },
+        {
+          "text": "Tu invites tes camarades à participer.",
+          "house": "Poufsouffle"
+        },
+        {
+          "text": "Tu changes les chaussures des autres pour les piéger.",
+          "house": "Serpentard"
+        }
+      ],
+      "categories": [
+        "Sorts & potions"
+      ]
+    },
+    {
+      "text": "Une potion de rire se renverse sur ton bureau.",
+      "options": [
+        {
+          "text": "Tu te laisses aller à fou rire avec les autres.",
+          "house": "Gryffondor"
+        },
+        {
+          "text": "Tu chronomètres les effets sur chacun.",
+          "house": "Serdaigle"
+        },
+        {
+          "text": "Tu t’assures que tout le monde se sente bien.",
+          "house": "Poufsouffle"
+        },
+        {
+          "text": "Tu en conserves une fiole pour plus tard.",
+          "house": "Serpentard"
+        }
+      ],
+      "categories": [
+        "Sorts & potions"
+      ]
+    },
+    {
+      "text": "Ton reflet te fait un clin d'œil différent du tien.",
+      "options": [
+        {
+          "text": "Tu lui rends son clin d'œil, bravement.",
+          "house": "Gryffondor"
+        },
+        {
+          "text": "Tu analyses la latéralité de ses mouvements.",
+          "house": "Serdaigle"
+        },
+        {
+          "text": "Tu t’en fais un ami imaginaire.",
+          "house": "Poufsouffle"
+        },
+        {
+          "text": "Tu le testes en changeant de vêtements rapidement.",
+          "house": "Serpentard"
+        }
+      ],
+      "categories": [
+        "Autre"
+      ]
+    },
+    {
+      "text": "Le plafond de la salle devient un ciel étoilé en pleine journée.",
+      "options": [
+        {
+          "text": "Tu t’allonges pour contempler les étoiles.",
+          "house": "Gryffondor"
+        },
+        {
+          "text": "Tu repères les constellations anormales.",
+          "house": "Serdaigle"
+        },
+        {
+          "text": "Tu invites les autres à admirer avec toi.",
+          "house": "Poufsouffle"
+        },
+        {
+          "text": "Tu vérifies s’il y a un message caché dans les étoiles.",
+          "house": "Serpentard"
+        }
+      ],
+      "categories": [
+        "Salles et lieux étranges"
+      ]
+    },
+    {
+      "text": "Ton lit flotte de quelques centimètres chaque nuit.",
+      "options": [
+        {
+          "text": "Tu l’acceptes comme une nouvelle aventure.",
+          "house": "Gryffondor"
+        },
+        {
+          "text": "Tu notes les variations de hauteur.",
+          "house": "Serdaigle"
+        },
+        {
+          "text": "Tu ajoutes des oreillers pour plus de confort.",
+          "house": "Poufsouffle"
+        },
+        {
+          "text": "Tu regardes s’il se déplace dans la pièce.",
+          "house": "Serpentard"
+        }
+      ],
+      "categories": [
+        "Autre"
+      ]
+    },
+    {
+      "text": "La voix d’un inconnu sort de ton encrier.",
+      "options": [
+        {
+          "text": "Tu engages la conversation.",
+          "house": "Gryffondor"
+        },
+        {
+          "text": "Tu transcris chaque mot.",
+          "house": "Serdaigle"
+        },
+        {
+          "text": "Tu lui offres un prénom.",
+          "house": "Poufsouffle"
+        },
+        {
+          "text": "Tu lui poses des questions sur les secrets du château.",
+          "house": "Serpentard"
+        }
+      ],
+      "categories": [
+        "Phénomènes étranges",
+        "Sorts & potions"
+      ]
+    },
+    {
+      "text": "Les murs de ta chambre changent de couleur selon ton humeur.",
+      "options": [
+        {
+          "text": "Tu joues à provoquer les couleurs.",
+          "house": "Gryffondor"
+        },
+        {
+          "text": "Tu notes les correspondances émotion-couleur.",
+          "house": "Serdaigle"
+        },
+        {
+          "text": "Tu laisses un tableau d’humeur dessus.",
+          "house": "Poufsouffle"
+        },
+        {
+          "text": "Tu essaies de faire croire que c’est lié à un sort interdit.",
+          "house": "Serpentard"
+        }
+      ],
+      "categories": [
+        "Autre"
+      ]
+    },
+    {
+      "text": "Des chandelles chantent une berceuse à minuit.",
+      "options": [
+        {
+          "text": "Tu les accompagnes en chœur.",
+          "house": "Gryffondor"
+        },
+        {
+          "text": "Tu analyses leur mélodie magique.",
+          "house": "Serdaigle"
+        },
+        {
+          "text": "Tu leur fais un lit en cire.",
+          "house": "Poufsouffle"
+        },
+        {
+          "text": "Tu les enregistres pour les faire chanter autre chose.",
+          "house": "Serpentard"
+        }
+      ],
+      "categories": [
+        "Phénomènes étranges"
+      ]
+    },
+    {
+      "text": "Ton ombre disparaît à certains moments.",
+      "options": [
+        {
+          "text": "Tu te lances à sa recherche.",
+          "house": "Gryffondor"
+        },
+        {
+          "text": "Tu testes les conditions de disparition.",
+          "house": "Serdaigle"
+        },
+        {
+          "text": "Tu l’attends en silence.",
+          "house": "Poufsouffle"
+        },
+        {
+          "text": "Tu profites de son absence pour faire des expériences secrètes.",
+          "house": "Serpentard"
+        }
+      ],
+      "categories": [
+        "Phénomènes étranges"
+      ]
+    },
+    {
+      "text": "Des flocons tombent dans ta chambre mais ne fondent pas.",
+      "options": [
+        {
+          "text": "Tu danses sous les flocons enchantés.",
+          "house": "Gryffondor"
+        },
+        {
+          "text": "Tu analyses leur structure magique.",
+          "house": "Serdaigle"
+        },
+        {
+          "text": "Tu les recueilles pour les partager.",
+          "house": "Poufsouffle"
+        },
+        {
+          "text": "Tu les caches dans une boîte à mystères.",
+          "house": "Serpentard"
+        }
+      ],
+      "categories": [
+        "Autre"
+      ]
+    },
+    {
+      "text": "Un professeur te demande de l’aider pour une mission secrète.",
+      "options": [
+        {
+          "text": "Tu acceptes sans poser de questions.",
+          "house": "Gryffondor"
+        },
+        {
+          "text": "Tu notes tout pour ton journal de bord.",
+          "house": "Serdaigle"
+        },
+        {
+          "text": "Tu proposes d’en parler à un adulte de confiance.",
+          "house": "Poufsouffle"
+        },
+        {
+          "text": "Tu demandes quel avantage tu peux en tirer.",
+          "house": "Serpentard"
+        }
+      ],
+      "categories": [
+        "Relations & interactions"
+      ]
+    },
+    {
+      "text": "Un élève que tu ne connais pas te confie un objet précieux.",
+      "options": [
+        {
+          "text": "Tu le protèges à tout prix.",
+          "house": "Gryffondor"
+        },
+        {
+          "text": "Tu examines son origine discrètement.",
+          "house": "Serdaigle"
+        },
+        {
+          "text": "Tu l’apportes à un professeur.",
+          "house": "Poufsouffle"
+        },
+        {
+          "text": "Tu le caches dans ton dortoir pour en savoir plus.",
+          "house": "Serpentard"
+        }
+      ],
+      "categories": [
+        "Relations & interactions"
+      ]
+    },
+    {
+      "text": "Ton meilleur ami te ment sur un sort qu’il a raté.",
+      "options": [
+        {
+          "text": "Tu le confrontes directement.",
+          "house": "Gryffondor"
+        },
+        {
+          "text": "Tu analyses les indices autour du sort.",
+          "house": "Serdaigle"
+        },
+        {
+          "text": "Tu attends qu’il vienne t’en parler.",
+          "house": "Poufsouffle"
+        },
+        {
+          "text": "Tu gardes l’info et l’utilises si besoin.",
+          "house": "Serpentard"
+        }
+      ],
+      "categories": [
+        "Relations & interactions",
+        "Sorts & potions"
+      ]
+    },
+    {
+      "text": "Un camarade pleure dans un coin de la bibliothèque.",
+      "options": [
+        {
+          "text": "Tu vas le consoler sans hésiter.",
+          "house": "Gryffondor"
+        },
+        {
+          "text": "Tu lui tends un livre apaisant.",
+          "house": "Serdaigle"
+        },
+        {
+          "text": "Tu lui offres un biscuit ou un mot gentil.",
+          "house": "Poufsouffle"
+        },
+        {
+          "text": "Tu restes discret mais écoutes à distance.",
+          "house": "Serpentard"
+        }
+      ],
+      "categories": [
+        "Salles et lieux étranges"
+      ]
+    },
+    {
+      "text": "Un élève te défie à un duel en pleine cour.",
+      "options": [
+        {
+          "text": "Tu acceptes immédiatement.",
+          "house": "Gryffondor"
+        },
+        {
+          "text": "Tu cites les règles du duel magique.",
+          "house": "Serdaigle"
+        },
+        {
+          "text": "Tu proposes d’en parler calmement.",
+          "house": "Poufsouffle"
+        },
+        {
+          "text": "Tu cherches une faiblesse chez lui d’abord.",
+          "house": "Serpentard"
+        }
+      ],
+      "categories": [
+        "Relations & interactions"
+      ]
+    },
+    {
+      "text": "Un professeur oublie ta note à un devoir.",
+      "options": [
+        {
+          "text": "Tu le rappelles avec humour.",
+          "house": "Gryffondor"
+        },
+        {
+          "text": "Tu apportes des preuves organisées.",
+          "house": "Serdaigle"
+        },
+        {
+          "text": "Tu lui proposes ton aide pour retrouver la copie.",
+          "house": "Poufsouffle"
+        },
+        {
+          "text": "Tu demandes une faveur en échange du rappel.",
+          "house": "Serpentard"
+        }
+      ],
+      "categories": [
+        "Relations & interactions"
+      ]
+    },
+    {
+      "text": "Un groupe d’élèves t’exclut d’une activité.",
+      "options": [
+        {
+          "text": "Tu proposes une activité concurrente.",
+          "house": "Gryffondor"
+        },
+        {
+          "text": "Tu observes les raisons de leur choix.",
+          "house": "Serdaigle"
+        },
+        {
+          "text": "Tu essaies de faire la paix avec eux.",
+          "house": "Poufsouffle"
+        },
+        {
+          "text": "Tu trouves une autre manière de les impressionner.",
+          "house": "Serpentard"
+        }
+      ],
+      "categories": [
+        "Relations & interactions"
+      ]
+    },
+    {
+      "text": "Tu reçois un mot signé d’un admirateur secret.",
+      "options": [
+        {
+          "text": "Tu cherches à deviner qui c’est.",
+          "house": "Gryffondor"
+        },
+        {
+          "text": "Tu compares l’écriture avec tes archives.",
+          "house": "Serdaigle"
+        },
+        {
+          "text": "Tu le gardes précieusement sans en parler.",
+          "house": "Poufsouffle"
+        },
+        {
+          "text": "Tu fais croire que tu sais déjà qui c’est.",
+          "house": "Serpentard"
+        }
+      ],
+      "categories": [
+        "Enigmes & mystères"
+      ]
+    },
+    {
+      "text": "Un élève prétend être de ta maison pour gagner un pari.",
+      "options": [
+        {
+          "text": "Tu le démasques publiquement.",
+          "house": "Gryffondor"
+        },
+        {
+          "text": "Tu fais une enquête sur ses vraies origines.",
+          "house": "Serdaigle"
+        },
+        {
+          "text": "Tu en parles avec un préfet.",
+          "house": "Poufsouffle"
+        },
+        {
+          "text": "Tu l’utilises pour t’associer à son pari.",
+          "house": "Serpentard"
+        }
+      ],
+      "categories": [
+        "Relations & interactions"
+      ]
+    },
+    {
+      "text": "Une voix te pose une devinette dans le noir.",
+      "options": [
+        {
+          "text": "Tu réponds instinctivement.",
+          "house": "Gryffondor"
+        },
+        {
+          "text": "Tu notes chaque mot pour l’analyser plus tard.",
+          "house": "Serdaigle"
+        },
+        {
+          "text": "Tu écoutes en silence pour mieux comprendre.",
+          "house": "Poufsouffle"
+        },
+        {
+          "text": "Tu réponds par une devinette encore plus complexe.",
+          "house": "Serpentard"
+        }
+      ],
+      "categories": [
+        "Enigmes & mystères",
+        "Phénomènes étranges"
+      ]
+    },
+    {
+      "text": "Tu trouves une suite de chiffres gravée sous ta chaise.",
+      "options": [
+        {
+          "text": "Tu essayes toutes les combinaisons sur ton casier.",
+          "house": "Gryffondor"
+        },
+        {
+          "text": "Tu cherches dans les livres une signification.",
+          "house": "Serdaigle"
+        },
+        {
+          "text": "Tu demandes autour de toi si quelqu’un connaît.",
+          "house": "Poufsouffle"
+        },
+        {
+          "text": "Tu graves la suite ailleurs pour voir qui réagit.",
+          "house": "Serpentard"
+        }
+      ],
+      "categories": [
+        "Autre"
+      ]
+    },
+    {
+      "text": "Une énigme s’affiche sur le miroir de la salle de bain.",
+      "options": [
+        {
+          "text": "Tu la résous à voix haute, sans hésiter.",
+          "house": "Gryffondor"
+        },
+        {
+          "text": "Tu copies les symboles pour en faire une analyse.",
+          "house": "Serdaigle"
+        },
+        {
+          "text": "Tu demandes si d’autres l’ont vue.",
+          "house": "Poufsouffle"
+        },
+        {
+          "text": "Tu attends minuit pour voir si elle change.",
+          "house": "Serpentard"
+        }
+      ],
+      "categories": [
+        "Enigmes & mystères",
+        "Objets magiques",
+        "Salles et lieux étranges"
+      ]
+    },
+    {
+      "text": "Une boîte ne s’ouvre que si on répond à une question personnelle.",
+      "options": [
+        {
+          "text": "Tu réponds honnêtement, sans peur.",
+          "house": "Gryffondor"
+        },
+        {
+          "text": "Tu étudies le mécanisme de la boîte.",
+          "house": "Serdaigle"
+        },
+        {
+          "text": "Tu proposes une réponse collective avec tes amis.",
+          "house": "Poufsouffle"
+        },
+        {
+          "text": "Tu testes plusieurs réponses pour cerner le système.",
+          "house": "Serpentard"
+        }
+      ],
+      "categories": [
+        "Autre"
+      ]
+    },
+    {
+      "text": "Un parchemin se couvre de runes quand tu éternues.",
+      "options": [
+        {
+          "text": "Tu éternues exprès pour voir ce qui s’écrit.",
+          "house": "Gryffondor"
+        },
+        {
+          "text": "Tu cherches la langue des runes dans tes notes.",
+          "house": "Serdaigle"
+        },
+        {
+          "text": "Tu montres le parchemin à un professeur bienveillant.",
+          "house": "Poufsouffle"
+        },
+        {
+          "text": "Tu l’emportes pour le décrypter tranquillement.",
+          "house": "Serpentard"
+        }
+      ],
+      "categories": [
+        "Objets magiques"
+      ]
+    },
+    {
+      "text": "Un tableau murmure un mot incompréhensible chaque soir.",
+      "options": [
+        {
+          "text": "Tu t’assois chaque soir pour l’écouter.",
+          "house": "Gryffondor"
+        },
+        {
+          "text": "Tu construis un dictionnaire sonore.",
+          "house": "Serdaigle"
+        },
+        {
+          "text": "Tu invites tes amis à enregistrer avec toi.",
+          "house": "Poufsouffle"
+        },
+        {
+          "text": "Tu essaies différents mots pour déclencher une réponse.",
+          "house": "Serpentard"
+        }
+      ],
+      "categories": [
+        "Autre"
+      ]
+    },
+    {
+      "text": "Un escalier te conduit vers une porte fermée par énigme.",
+      "options": [
+        {
+          "text": "Tu cogites jusqu’à résoudre le mystère.",
+          "house": "Gryffondor"
+        },
+        {
+          "text": "Tu compares la question avec les archives du château.",
+          "house": "Serdaigle"
+        },
+        {
+          "text": "Tu proposes des solutions avec ton équipe.",
+          "house": "Poufsouffle"
+        },
+        {
+          "text": "Tu espionnes un professeur pour obtenir la réponse.",
+          "house": "Serpentard"
+        }
+      ],
+      "categories": [
+        "Enigmes & mystères",
+        "Salles et lieux étranges"
+      ]
+    },
+    {
+      "text": "Un livre ne s’ouvre que lorsqu’on pense à quelque chose de précis.",
+      "options": [
+        {
+          "text": "Tu penses à ta plus grande peur pour essayer.",
+          "house": "Gryffondor"
+        },
+        {
+          "text": "Tu notes toutes tes pensées avant chaque tentative.",
+          "house": "Serdaigle"
+        },
+        {
+          "text": "Tu demandes aux autres ce qu’ils ont essayé.",
+          "house": "Poufsouffle"
+        },
+        {
+          "text": "Tu fais semblant d’y arriver pour observer les réactions.",
+          "house": "Serpentard"
+        }
+      ],
+      "categories": [
+        "Objets magiques"
+      ]
+    }
+  ]
+}

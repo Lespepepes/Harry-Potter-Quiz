@@ -2,28 +2,75 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <meta name="description" content="Découvre ta maison à Poudlard avec ce quiz interactif Harry Potter ! Gryffondor, Serpentard, Poufsouffle ou Serdaigle ?">
+  <meta name="keywords" content="Harry Potter, quiz, Poudlard, Choixpeau Magique, Gryffondor, Serpentard, Poufsouffle, Serdaigle">
+  <meta name="author" content="Quiz Harry Potter">
+  
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="Test du Choixpeau Magique - Harry Potter">
+  <meta property="og:description" content="Découvre ta maison à Poudlard avec ce quiz magique !">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="fr_FR">
+  
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🪄</text></svg>">
+  
   <title>Test du Choixpeau Magique - Harry Potter</title>
   <link rel="stylesheet" href="style.css">
+  
+  <!-- Preload critical fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 </head>
 <body>
-  <div class="stars"></div>
+  <!-- Starfield background -->
+  <div class="stars" aria-hidden="true"></div>
   
-  <div class="header">
+  <!-- Main header -->
+  <header class="header">
     <h1>Le Choixpeau Magique</h1>
     <p class="subtitle">Découvre ta maison à Poudlard</p>
-  </div>
+  </header>
 
-  <div class="container">
-    <div class="progress-container">
+  <!-- Main content -->
+  <main class="container">
+    <!-- Progress indicator -->
+    <div class="progress-container" role="progressbar" aria-label="Progression du quiz">
       <div class="progress-bar" id="progress"></div>
     </div>
     
-    <div id="quiz"></div>
-    <div class="result" id="result"></div>
+    <!-- Quiz content -->
+    <section id="quiz" aria-live="polite">
+      <!-- Questions will be loaded here -->
+    </section>
+    
+    <!-- Results section -->
+    <section class="result" id="result" aria-live="polite">
+      <!-- Results will be displayed here -->
+    </section>
+  </main>
+
+  <!-- Loading indicator -->
+  <div id="loading" class="loading-screen">
+    <div class="loading-content">
+      <div class="magical-spinner">✨</div>
+      <p>Le Choixpeau s'éveille...</p>
+    </div>
   </div>
 
+  <!-- Scripts -->
   <script src="snitch-game.js"></script>
   <script src="script.js"></script>
+  
+  <!-- Service Worker for potential offline usage -->
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        // Optional: Register a service worker for offline functionality
+        // navigator.serviceWorker.register('/sw.js');
+      });
+    }
+  </script>
 </body>
 </html>

@@ -1,4 +1,4 @@
-// Mini-jeu Snitch Chase
+// Mini-jeu Snitch Chase - Défi Final
 class SnitchGame {
   constructor(onComplete) {
     this.onComplete = onComplete;
@@ -6,8 +6,8 @@ class SnitchGame {
     this.ctx = null;
     this.gameRunning = false;
     this.score = 0;
-    this.timeLeft = 25; // secondes
-    this.difficulty = 1;
+    this.timeLeft = 30; // secondes
+    this.difficulty = 1.4; // Difficulté de base
     
     // Position du joueur
     this.playerX = 0.5; // 0 = gauche, 1 = droite
@@ -20,10 +20,11 @@ class SnitchGame {
     this.snitchVelocityY = 0;
     this.snitchCaught = false;
     this.snitchTarget = { x: 0.5, y: 0.8 }; // Point cible pour le Vif
+    this.snitchEscaping = false; // Pour l'effet visuel d'échappement
     
     // Obstacles
     this.obstacles = [];
-    this.obstacleSpeed = 0.005;  // Plus lent au début
+    this.obstacleSpeed = 0.004;  // Obstacles plus lents
     
     // Contrôles
     this.useGyroscope = false;
@@ -39,7 +40,7 @@ class SnitchGame {
     
     // Score et capture
     this.catchProgress = 0;
-    this.maxCatchProgress = 100;
+    this.maxCatchProgress = 75; // Facile à atteindre 100%
   }
   
   init() {
@@ -48,7 +49,7 @@ class SnitchGame {
     gameContainer.className = 'snitch-game-container';
     gameContainer.innerHTML = `
       <div class="snitch-game-header">
-        <h3>Attrape le Vif d'Or !</h3>
+        <h3>🪶 Défi Final : Chasse au Vif d'Or ! 🪶</h3>
         <div class="snitch-timer">
           <span class="timer-icon">⏱</span>
           <span id="snitch-time">${this.timeLeft}s</span>
@@ -56,7 +57,8 @@ class SnitchGame {
       </div>
       <canvas id="snitch-canvas"></canvas>
       <div class="snitch-instructions" id="snitch-instructions">
-        <p>Déplace le cercle pour capturer le Vif d'Or !</p>
+        <p><strong>C'est le moment de vérité !</strong></p>
+        <p>Dirige le cercle vers le Vif d'Or et maintiens-le dessus pour le capturer !</p>
         <p class="control-hint"></p>
       </div>
       <div class="catch-progress">
@@ -121,7 +123,7 @@ class SnitchGame {
   
   setupGyroscope() {
     this.useGyroscope = true;
-    document.querySelector('.control-hint').textContent = 'Incline ton téléphone pour diriger !';
+    document.querySelector('.control-hint').textContent = '📱 Incline ton téléphone pour diriger le cercle !';
     
     window.addEventListener('deviceorientation', (e) => {
       if (this.gameRunning) {
@@ -137,7 +139,13 @@ class SnitchGame {
   }
   
   setupTouch() {
-    document.querySelector('.control-hint').textContent = 'Glisse ton doigt pour diriger !';
+    const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    
+    if (isMobile) {
+      document.querySelector('.control-hint').textContent = '👆 Glisse ton doigt pour diriger le cercle !';
+    } else {
+      document.querySelector('.control-hint').textContent = '🖱️ Déplace ta souris pour diriger le cercle !';
+    }
     
     let touchStartX = null;
     let touchStartY = null;
@@ -158,9 +166,9 @@ class SnitchGame {
         const touch = e.touches[0];
         const deltaX = touch.clientX - touchStartX;
         const deltaY = touch.clientY - touchStartY;
-        const maxDelta = this.canvas.width / 3;
+        const maxDelta = this.canvas.width / 2.8; // Sensibilité équilibrée
         
-        // Mouvement horizontal et vertical
+        // Mouvement direct mais avec limites
         this.playerX = Math.max(0.1, Math.min(0.9, baseX + deltaX / maxDelta));
         this.playerY = Math.max(0.1, Math.min(0.9, baseY + deltaY / maxDelta));
       }
@@ -171,37 +179,32 @@ class SnitchGame {
       touchStartY = null;
     });
     
-    // Support souris pour desktop
-    let mouseDown = false;
-    let mouseStartX = null;
-    let mouseStartY = null;
-    
-    this.canvas.addEventListener('mousedown', (e) => {
-      mouseDown = true;
-      const rect = this.canvas.getBoundingClientRect();
-      mouseStartX = e.clientX - rect.left;
-      mouseStartY = e.clientY - rect.top;
-      baseX = this.playerX;
-      baseY = this.playerY;
-    });
-    
+    // Support souris pour desktop - CONTRÔLE DIRECT
     this.canvas.addEventListener('mousemove', (e) => {
-      if (this.gameRunning && mouseDown) {
+      if (this.gameRunning) {
         const rect = this.canvas.getBoundingClientRect();
-        const currentX = e.clientX - rect.left;
-        const currentY = e.clientY - rect.top;
-        const deltaX = currentX - mouseStartX;
-        const deltaY = currentY - mouseStartY;
-        const maxDelta = this.canvas.width / 3;
+        // Position directe de la souris
+        this.playerX = (e.clientX - rect.left) / rect.width;
+        this.playerY = (e.clientY - rect.top) / rect.height;
         
-        this.playerX = Math.max(0.1, Math.min(0.9, baseX + deltaX / maxDelta));
-        this.playerY = Math.max(0.1, Math.min(0.9, baseY + deltaY / maxDelta));
+        // Garder dans les limites
+        this.playerX = Math.max(0.1, Math.min(0.9, this.playerX));
+        this.playerY = Math.max(0.1, Math.min(0.9, this.playerY));
       }
     });
     
-    this.canvas.addEventListener('mouseup', () => {
-      mouseDown = false;
-    });
+    // Gérer le curseur sur desktop uniquement
+    if (!isMobile) {
+      this.canvas.addEventListener('mouseenter', () => {
+        if (this.gameRunning) {
+          this.canvas.style.cursor = 'none';
+        }
+      });
+      
+      this.canvas.addEventListener('mouseleave', () => {
+        this.canvas.style.cursor = 'default';
+      });
+    }
     
     // Empêcher le défilement de la page
     this.canvas.addEventListener('touchmove', (e) => e.preventDefault(), { passive: false });
@@ -217,9 +220,9 @@ class SnitchGame {
     this.gameRunning = true;
     document.getElementById('snitch-instructions').style.opacity = '0';
     
-    // S'assurer que les contrôles sont configurés
-    if (!this.useGyroscope && this.touchStartX === null) {
-      this.setupTouch();
+    // Cacher le curseur sur desktop
+    if (!/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+      this.canvas.style.cursor = 'none';
     }
     
     // Générer les premiers obstacles
@@ -236,15 +239,24 @@ class SnitchGame {
   startTimer() {
     const timerInterval = setInterval(() => {
       this.timeLeft--;
-      document.getElementById('snitch-time').textContent = `${this.timeLeft}s`;
+      const timerElement = document.getElementById('snitch-time');
+      if (timerElement) {
+        timerElement.textContent = `${this.timeLeft}s`;
+        
+        // Changer la couleur quand le temps devient critique
+        if (this.timeLeft <= 10) {
+          timerElement.style.color = '#ff6b6b';
+          timerElement.parentElement.style.borderColor = '#ff6b6b';
+        }
+      }
       
       if (this.timeLeft <= 0 || this.snitchCaught) {
         clearInterval(timerInterval);
         this.endGame();
       }
       
-      // Augmenter la difficulté plus progressivement
-      if (this.timeLeft % 5 === 0) {
+      // Augmenter la difficulté progressivement
+      if (this.timeLeft % 8 === 0) {
         this.difficulty += 0.15;
         this.obstacleSpeed *= 1.05;
       }
@@ -279,12 +291,12 @@ class SnitchGame {
   updateSnitch(deltaTime) {
     // Mouvement erratique du Vif
     const time = performance.now() / 1000;
-    const baseSpeed = 0.0004 * this.difficulty;
+    const baseSpeed = 0.0005 * this.difficulty;
     
-    // Le Vif a une chance de voler vers le joueur
-    if (Math.random() < 0.01) {
+    // Le Vif change de direction moins souvent
+    if (Math.random() < 0.015) {
       // Nouveau point cible aléatoire, parfois près du joueur
-      if (Math.random() < 0.3) {
+      if (Math.random() < 0.3) { // Plus souvent près du joueur
         // Vole près du joueur
         this.snitchTarget.x = this.playerX + (Math.random() - 0.5) * 0.3;
         this.snitchTarget.y = this.playerY + (Math.random() - 0.5) * 0.3;
@@ -299,25 +311,36 @@ class SnitchGame {
     const dx = this.snitchTarget.x - this.snitchX;
     const dy = this.snitchTarget.y - this.snitchY;
     const dist = Math.sqrt(dx * dx + dy * dy);
-    
-    if (dist > 0.05) {
-      // Se diriger vers la cible avec des mouvements erratiques
+
+    // Si très proche de la cible, choisir une nouvelle cible
+    if (dist < 0.05) {
+      this.snitchTarget.x = 0.1 + Math.random() * 0.8;
+      this.snitchTarget.y = 0.1 + Math.random() * 0.8;
+    }
+    if (dist > 0.08) {
+      // Se diriger vers la cible avec des mouvements moins erratiques
       this.snitchVelocityX = (dx / dist) * baseSpeed + (Math.random() - 0.5) * baseSpeed * 0.5;
       this.snitchVelocityY = (dy / dist) * baseSpeed + (Math.random() - 0.5) * baseSpeed * 0.5;
     }
     
-    // Mouvement sinusoïdal ajouté
-    this.snitchX += this.snitchVelocityX * deltaTime + Math.sin(time * 4) * 0.0003;
-    this.snitchY += this.snitchVelocityY * deltaTime + Math.cos(time * 3) * 0.0002;
+    // Mouvement sinusoïdal moins prononcé
+    this.snitchX += this.snitchVelocityX * deltaTime + Math.sin(time * 4) * 0.0002;
+    this.snitchY += this.snitchVelocityY * deltaTime + Math.cos(time * 3) * 0.0001;
     
     // Garder le Vif dans les limites avec rebond
-    if (this.snitchX <= 0.05 || this.snitchX >= 0.95) {
-      this.snitchVelocityX *= -1;
-      this.snitchX = Math.max(0.05, Math.min(0.95, this.snitchX));
+    if (this.snitchX <= 0.05) {
+      this.snitchVelocityX = Math.abs(this.snitchVelocityX);
+      this.snitchX = 0.06;
+    } else if (this.snitchX >= 0.95) {
+      this.snitchVelocityX = -Math.abs(this.snitchVelocityX);
+      this.snitchX = 0.94;
     }
-    if (this.snitchY <= 0.05 || this.snitchY >= 0.95) {
-      this.snitchVelocityY *= -1;
-      this.snitchY = Math.max(0.05, Math.min(0.95, this.snitchY));
+    if (this.snitchY <= 0.05) {
+      this.snitchVelocityY = Math.abs(this.snitchVelocityY);
+      this.snitchY = 0.06;
+    } else if (this.snitchY >= 0.95) {
+      this.snitchVelocityY = -Math.abs(this.snitchVelocityY);
+      this.snitchY = 0.94;
     }
     
     // Vérifier la capture
@@ -326,19 +349,33 @@ class SnitchGame {
       Math.pow((this.snitchY - this.playerY) * this.canvas.height, 2)
     );
     
-    const catchRadius = 70;  // Zone de capture
+    const catchRadius = 60; // Zone de capture tolérante
     if (distance < catchRadius) {
-      this.catchProgress = Math.min(this.maxCatchProgress, this.catchProgress + deltaTime * 0.1);
+      // Ne compte que si on est bien centré
+      const centerBonus = 1 - (distance / catchRadius) * 0.3;
+      this.catchProgress = Math.min(this.maxCatchProgress, this.catchProgress + deltaTime * 0.1 * centerBonus);
       
-      // Créer plus de particules quand on est proche
+      // Créer des particules
       if (Math.random() < 0.4) {
         this.createParticles(this.snitchX * this.canvas.width, this.snitchY * this.canvas.height);
       }
       
-      // Le Vif essaie de s'échapper quand on est proche
-      if (Math.random() < 0.02) {
-        this.snitchVelocityX += (Math.random() - 0.5) * 0.001;
-        this.snitchVelocityY += (Math.random() - 0.5) * 0.001;
+      // Le Vif essaie de s'échapper mais doucement
+      this.snitchEscaping = false;
+      if (distance < catchRadius * 0.9) { // Zone d'évitement très proche
+        this.snitchEscaping = true;
+        const escapeAngle = Math.atan2(this.snitchY - this.playerY, this.snitchX - this.playerX);
+        const escapePower = 0.0008 * (1 - distance / (catchRadius * 0.9));
+        this.snitchVelocityX += Math.cos(escapeAngle) * escapePower;
+        this.snitchVelocityY += Math.sin(escapeAngle) * escapePower;
+        
+        // Limiter la vitesse maximale
+        const maxSpeed = 0.001;
+        const currentSpeed = Math.sqrt(this.snitchVelocityX * this.snitchVelocityX + this.snitchVelocityY * this.snitchVelocityY);
+        if (currentSpeed > maxSpeed) {
+          this.snitchVelocityX = (this.snitchVelocityX / currentSpeed) * maxSpeed;
+          this.snitchVelocityY = (this.snitchVelocityY / currentSpeed) * maxSpeed;
+        }
       }
       
       if (this.catchProgress >= this.maxCatchProgress) {
@@ -346,7 +383,7 @@ class SnitchGame {
         this.triggerVibration();
       }
     } else {
-      this.catchProgress = Math.max(0, this.catchProgress - deltaTime * 0.05);
+      this.catchProgress = Math.max(0, this.catchProgress - deltaTime * 0.04); // Perte lente
     }
     
     // Mettre à jour la barre de progression
@@ -388,7 +425,7 @@ class SnitchGame {
   
   triggerVibration() {
     if (navigator.vibrate) {
-      navigator.vibrate(200);
+      navigator.vibrate([200, 100, 200]);
     }
   }
   
@@ -421,10 +458,13 @@ class SnitchGame {
     
     // Dessiner les instructions si nécessaire
     if (this.gameRunning && this.timeLeft > 23) {
-      this.ctx.fillStyle = 'rgba(255, 215, 0, 0.8)';
-      this.ctx.font = '18px Crimson Text';
+      this.ctx.fillStyle = 'rgba(255, 215, 0, 0.9)';
+      this.ctx.font = 'bold 18px Crimson Text';
       this.ctx.textAlign = 'center';
-      this.ctx.fillText('Déplace le cercle pour capturer le Vif d\'Or !', this.canvas.width / 2, 30);
+      this.ctx.shadowColor = 'rgba(0, 0, 0, 0.5)';
+      this.ctx.shadowBlur = 4;
+      this.ctx.fillText('Maintiens le cercle sur le Vif d\'Or pour le capturer !', this.canvas.width / 2, 30);
+      this.ctx.shadowBlur = 0;
     }
   }
   
@@ -463,7 +503,6 @@ class SnitchGame {
         this.ctx.fill();
       } else {
         // Tour de Poudlard
-        // Base de la tour
         const gradient = this.ctx.createLinearGradient(x - w/2, y, x + w/2, y);
         gradient.addColorStop(0, '#3a2a1a');
         gradient.addColorStop(0.5, '#4a3a2a');
@@ -498,10 +537,10 @@ class SnitchGame {
   drawCatchCircle() {
     const centerX = this.playerX * this.canvas.width;
     const centerY = this.playerY * this.canvas.height;
-    const radius = 70;
+    const radius = 60;
     
     // Cercle de base
-    this.ctx.strokeStyle = 'rgba(255, 255, 255, 0.3)';
+    this.ctx.strokeStyle = 'rgba(255, 255, 255, 0.4)';
     this.ctx.lineWidth = 2;
     this.ctx.setLineDash([5, 5]);
     this.ctx.beginPath();
@@ -516,7 +555,7 @@ class SnitchGame {
       this.ctx.strokeStyle = progressColor;
       this.ctx.lineWidth = 4;
       this.ctx.shadowColor = progressColor;
-      this.ctx.shadowBlur = 10;
+      this.ctx.shadowBlur = 15;
       
       this.ctx.beginPath();
       this.ctx.arc(centerX, centerY, radius, -Math.PI/2, -Math.PI/2 + (Math.PI * 2 * this.catchProgress / this.maxCatchProgress));
@@ -526,11 +565,14 @@ class SnitchGame {
     }
     
     // Texte indicateur
-    if (this.catchProgress > 75) {
+    if (this.catchProgress > 60) {
       this.ctx.fillStyle = '#ffd700';
       this.ctx.font = 'bold 16px Crimson Text';
       this.ctx.textAlign = 'center';
-      this.ctx.fillText('Presque !', centerX, centerY - radius - 15);
+      this.ctx.shadowColor = 'rgba(0, 0, 0, 0.7)';
+      this.ctx.shadowBlur = 4;
+      this.ctx.fillText('Capture en cours...', centerX, centerY - radius - 15);
+      this.ctx.shadowBlur = 0;
     }
   }
   
@@ -538,72 +580,84 @@ class SnitchGame {
     const x = this.snitchX * this.canvas.width;
     const y = this.snitchY * this.canvas.height;
     
-    // Aura dorée autour du Vif
-    const auraGradient = this.ctx.createRadialGradient(x, y, 0, x, y, 40);
-    auraGradient.addColorStop(0, 'rgba(255, 215, 0, 0.3)');
-    auraGradient.addColorStop(1, 'rgba(255, 215, 0, 0)');
+    // Aura dorée autour du Vif (rouge si en fuite)
+    const auraGradient = this.ctx.createRadialGradient(x, y, 0, x, y, 50);
+    if (this.snitchEscaping) {
+      auraGradient.addColorStop(0, 'rgba(255, 100, 0, 0.5)');
+      auraGradient.addColorStop(1, 'rgba(255, 0, 0, 0)');
+    } else {
+      auraGradient.addColorStop(0, 'rgba(255, 215, 0, 0.4)');
+      auraGradient.addColorStop(1, 'rgba(255, 215, 0, 0)');
+    }
     this.ctx.fillStyle = auraGradient;
-    this.ctx.fillRect(x - 40, y - 40, 80, 80);
+    this.ctx.fillRect(x - 50, y - 50, 100, 100);
     
-    // Ailes animées
-    const wingSpan = 35;
-    const wingFlap = Math.sin(performance.now() / 50) * 15;
+    // Ailes animées (battent plus vite si en fuite)
+    const wingSpan = 40;
+    const flapSpeed = this.snitchEscaping ? 25 : 40;
+    const wingFlap = Math.sin(performance.now() / flapSpeed) * 18;
     
     this.ctx.save();
     
     // Ombre des ailes
-    this.ctx.shadowColor = 'rgba(0, 0, 0, 0.3)';
-    this.ctx.shadowBlur = 10;
-    this.ctx.shadowOffsetY = 5;
+    this.ctx.shadowColor = 'rgba(0, 0, 0, 0.4)';
+    this.ctx.shadowBlur = 12;
+    this.ctx.shadowOffsetY = 6;
     
-    this.ctx.fillStyle = 'rgba(255, 255, 255, 0.9)';
+    this.ctx.fillStyle = 'rgba(255, 255, 255, 0.95)';
     // Aile gauche
     this.ctx.beginPath();
-    this.ctx.ellipse(x - 18, y + wingFlap/2, wingSpan, 12, -0.3, 0, Math.PI * 2);
+    this.ctx.ellipse(x - 20, y + wingFlap/2, wingSpan, 14, -0.3, 0, Math.PI * 2);
     this.ctx.fill();
     // Aile droite
     this.ctx.beginPath();
-    this.ctx.ellipse(x + 18, y - wingFlap/2, wingSpan, 12, 0.3, 0, Math.PI * 2);
+    this.ctx.ellipse(x + 20, y - wingFlap/2, wingSpan, 14, 0.3, 0, Math.PI * 2);
     this.ctx.fill();
     
     // Corps doré du Vif
-    this.ctx.shadowColor = '#ffd700';
-    this.ctx.shadowBlur = 25;
+    this.ctx.shadowColor = this.snitchEscaping ? '#ff6400' : '#ffd700';
+    this.ctx.shadowBlur = 30;
     this.ctx.shadowOffsetY = 0;
     
     // Corps principal
-    const bodyGradient = this.ctx.createRadialGradient(x - 5, y - 5, 0, x, y, 20);
-    bodyGradient.addColorStop(0, '#ffed4e');
-    bodyGradient.addColorStop(0.5, '#ffd700');
-    bodyGradient.addColorStop(1, '#ffb700');
+    const bodyGradient = this.ctx.createRadialGradient(x - 6, y - 6, 0, x, y, 22);
+    if (this.snitchEscaping) {
+      bodyGradient.addColorStop(0, '#ffdd00');
+      bodyGradient.addColorStop(0.5, '#ff9900');
+      bodyGradient.addColorStop(1, '#ff6600');
+    } else {
+      bodyGradient.addColorStop(0, '#ffed4e');
+      bodyGradient.addColorStop(0.5, '#ffd700');
+      bodyGradient.addColorStop(1, '#ffb700');
+    }
     this.ctx.fillStyle = bodyGradient;
     
     this.ctx.beginPath();
-    this.ctx.arc(x, y, 15, 0, Math.PI * 2);
+    this.ctx.arc(x, y, 17, 0, Math.PI * 2);
     this.ctx.fill();
     
     // Détails des ailes
-    this.ctx.strokeStyle = 'rgba(255, 255, 255, 0.5)';
+    this.ctx.strokeStyle = 'rgba(255, 255, 255, 0.6)';
     this.ctx.lineWidth = 1;
     this.ctx.shadowBlur = 0;
     
     // Lignes sur les ailes
     for (let i = -1; i <= 1; i++) {
       this.ctx.beginPath();
-      this.ctx.moveTo(x - 18, y + wingFlap/2);
-      this.ctx.lineTo(x - 18 - wingSpan * 0.8, y + wingFlap/2 + i * 8);
+      this.ctx.moveTo(x - 20, y + wingFlap/2);
+      this.ctx.lineTo(x - 20 - wingSpan * 0.8, y + wingFlap/2 + i * 10);
       this.ctx.stroke();
       
       this.ctx.beginPath();
-      this.ctx.moveTo(x + 18, y - wingFlap/2);
-      this.ctx.lineTo(x + 18 + wingSpan * 0.8, y - wingFlap/2 + i * 8);
+      this.ctx.moveTo(x + 20, y - wingFlap/2);
+      this.ctx.lineTo(x + 20 + wingSpan * 0.8, y - wingFlap/2 + i * 10);
       this.ctx.stroke();
     }
     
     // Reflet brillant
-    this.ctx.fillStyle = 'rgba(255, 255, 255, 0.7)';
+    this.ctx.fillStyle = 'rgba(255, 255, 255, 0.8)';
     this.ctx.beginPath();
-    this.ctx.arc(x - 5, y - 5, 5, 0, Math.PI * 2);
+    this.ctx.arc(x - 6, y - 6, 6, 0, Math.PI * 2);
     this.ctx.fill();
     
     this.ctx.restore();
@@ -612,9 +666,12 @@ class SnitchGame {
   drawParticles() {
     this.particles.forEach(p => {
       this.ctx.fillStyle = `rgba(255, 215, 0, ${p.life})`;
+      this.ctx.shadowColor = `rgba(255, 215, 0, ${p.life * 0.5})`;
+      this.ctx.shadowBlur = 5;
       this.ctx.beginPath();
       this.ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
       this.ctx.fill();
+      this.ctx.shadowBlur = 0;
     });
   }
   
@@ -623,26 +680,32 @@ class SnitchGame {
     const y = this.playerY * this.canvas.height;
     
     // Petit indicateur au centre du cercle
-    this.ctx.fillStyle = 'rgba(255, 255, 255, 0.4)';
+    this.ctx.fillStyle = 'rgba(255, 255, 255, 0.6)';
+    this.ctx.shadowColor = 'rgba(255, 255, 255, 0.8)';
+    this.ctx.shadowBlur = 8;
     this.ctx.beginPath();
-    this.ctx.arc(x, y, 4, 0, Math.PI * 2);
+    this.ctx.arc(x, y, 5, 0, Math.PI * 2);
     this.ctx.fill();
+    this.ctx.shadowBlur = 0;
     
     // Réticule de visée
-    this.ctx.strokeStyle = 'rgba(255, 255, 255, 0.6)';
-    this.ctx.lineWidth = 1;
+    this.ctx.strokeStyle = 'rgba(255, 255, 255, 0.7)';
+    this.ctx.lineWidth = 2;
+    this.ctx.shadowColor = 'rgba(255, 255, 255, 0.5)';
+    this.ctx.shadowBlur = 4;
     this.ctx.beginPath();
     // Lignes horizontales
-    this.ctx.moveTo(x - 15, y);
-    this.ctx.lineTo(x - 8, y);
-    this.ctx.moveTo(x + 8, y);
-    this.ctx.lineTo(x + 15, y);
+    this.ctx.moveTo(x - 18, y);
+    this.ctx.lineTo(x - 10, y);
+    this.ctx.moveTo(x + 10, y);
+    this.ctx.lineTo(x + 18, y);
     // Lignes verticales
-    this.ctx.moveTo(x, y - 15);
-    this.ctx.lineTo(x, y - 8);
-    this.ctx.moveTo(x, y + 8);
-    this.ctx.lineTo(x, y + 15);
+    this.ctx.moveTo(x, y - 18);
+    this.ctx.lineTo(x, y - 10);
+    this.ctx.moveTo(x, y + 10);
+    this.ctx.lineTo(x, y + 18);
     this.ctx.stroke();
+    this.ctx.shadowBlur = 0;
   }
   
   animate() {
@@ -666,10 +729,13 @@ class SnitchGame {
       cancelAnimationFrame(this.animationId);
     }
     
+    // Réafficher le curseur
+    this.canvas.style.cursor = 'default';
+    
     // Calculer le score
     if (this.snitchCaught) {
       this.score = 3; // Maximum
-    } else if (this.catchProgress > 50) {
+    } else if (this.catchProgress > 30) {
       this.score = 2; // Bien essayé
     } else {
       this.score = 1; // Participation
@@ -681,26 +747,40 @@ class SnitchGame {
   
   showResult() {
     const messages = {
-      3: "Incroyable ! Tu as attrapé le Vif d'Or ! Digne d'un vrai Attrapeur !",
-      2: "Bien joué ! Le Vif t'a échappé de peu, mais ton talent est prometteur !",
-      1: "Le Vif d'Or est difficile à attraper, mais ton courage est admirable !"
+      3: "🏆 EXTRAORDINAIRE ! 🏆<br>Tu as attrapé le Vif d'Or ! Tu es un Attrapeur né !",
+      2: "⭐ Très bien joué ! ⭐<br>Tu as presque maîtrisé le Vif, ton talent est indéniable !",
+      1: "🛡️ Bien tenté ! 🛡️<br>Le Vif d'Or reste insaisissable, mais ton courage force le respect !"
     };
+    
+    // Message spécial si on était très proche
+    let bonusMessage = '';
+    if (!this.snitchCaught && this.catchProgress > 60) {
+      bonusMessage = '<p style="color: #c9b037; font-style: italic; margin-top: 1rem;">Si près du but ! Quelques secondes de plus et il était à toi !</p>';
+    }
     
     const resultDiv = document.createElement('div');
     resultDiv.className = 'snitch-result';
     resultDiv.innerHTML = `
       <div class="snitch-badge">
-        <svg viewBox="0 0 100 100" width="100" height="100">
-          <circle cx="50" cy="50" r="45" fill="#ffd700" opacity="0.2"/>
-          <circle cx="50" cy="50" r="15" fill="#ffd700"/>
-          <ellipse cx="30" cy="50" rx="20" ry="8" fill="white" opacity="0.8"/>
-          <ellipse cx="70" cy="50" rx="20" ry="8" fill="white" opacity="0.8"/>
+        <svg viewBox="0 0 120 120" width="120" height="120">
+          <defs>
+            <radialGradient id="snitchGrad" cx="50%" cy="30%">
+              <stop offset="0%" style="stop-color:#ffed4e"/>
+              <stop offset="100%" style="stop-color:#ffd700"/>
+            </radialGradient>
+          </defs>
+          <circle cx="60" cy="60" r="50" fill="url(#snitchGrad)" opacity="0.3"/>
+          <circle cx="60" cy="60" r="18" fill="#ffd700" stroke="#ffb700" stroke-width="2"/>
+          <ellipse cx="35" cy="60" rx="25" ry="10" fill="white" opacity="0.9"/>
+          <ellipse cx="85" cy="60" rx="25" ry="10" fill="white" opacity="0.9"/>
+          <circle cx="55" cy="55" r="3" fill="#ffed4e"/>
         </svg>
       </div>
-      <h3>${this.score === 3 ? 'Vif d\'Or Attrapé !' : 'Partie Terminée'}</h3>
+      <h3>${this.score === 3 ? 'Vif d\'Or Attrapé !' : 'Défi Terminé'}</h3>
       <p>${messages[this.score]}</p>
+      ${bonusMessage}
       <button class="continue-button" onclick="window.snitchGameComplete(${this.score})">
-        Continuer le quiz
+        🎯 Voir mes résultats finaux
       </button>
     `;
     
@@ -714,6 +794,6 @@ class SnitchGame {
 window.snitchGameComplete = function(score) {
   // Stocker le score pour l'utiliser plus tard
   window.snitchScore = score;
-  // Continuer le quiz
-  showQuestion();
+  // Aller directement aux résultats finaux
+  showResult();
 };
